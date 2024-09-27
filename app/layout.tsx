@@ -29,9 +29,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={cn(`${geistSans.variable} ${geistMono.variable} antialiased h-full max-w-7xl m-auto px-4`)}
+        className={cn(`${geistSans.variable} ${geistMono.variable} antialiased h-full max-w-3xl m-auto px-4 `)}
       >
+        <div className="pt-5">
+
         <Header/>
+        </div>
+      <div className="gap-5">
+
+        <div className="circlePosition w-[460px] h-[400px] bg-primary/35 rounded-b-3xl absolute z-1 top-[50%] left-[50%] translate-x-[50%] translate-y-[-50%] rotate-45 blur-[90px]"></div>
+        <div className="circlePosition w-[460px] h-[400px] bg-primary/35 rounded-b-3xl absolute z-1 top-[50%] right-[50%] translate-x-[50%] translate-y-[-50%] rotate-45 blur-[90px]"></div>
+      </div>
         {children}
       </body>
     </html>
