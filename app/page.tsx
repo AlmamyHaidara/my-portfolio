@@ -2,6 +2,7 @@ import Status from "@/components/Status";
 import { cn } from "@/lib/utils";
 import { Code, Github, Infinity, Linkedin } from "lucide-react";
 import Link from "next/link";
+import Spacing from '../src/components/Spacing';
 
 const styleClass = {
   badge:
@@ -11,11 +12,11 @@ export default function Home() {
   return (
     <div className=" w-full h-full flex justify-start mt-16 flex-col ">
       
-        <section className=" w-full h-96 flex justify-start flex-col my-5 items-start">
+        <section className=" w-full h-96 flex justify-center flex-col my-5 items-start">
           <div className="flex justify-start mt-5 items-center">
-            <div className="rounded-full  ">
+            <div className="rounded-full  mr-5">
               <img
-                src={"/assets/images/logo.png"}
+                src={"/assets/images/logo1.png"}
                 className="rounded-[100%] object-cover w-[100px] h-[100px]"
                 alt="alt"
               />
@@ -52,15 +53,14 @@ export default function Home() {
               ,
               <Link href={"#"} className={cn(`${styleClass.badge}`)}>
                 <Linkedin size={16} /> LinkedIn
-              </Link>
+              </Link> 
               .
             </p>
           </div>
         </section>
-
+    <Spacing size="md"/>
       <section>
-      <Status />
-
+        <Status />
       </section>
     </div>
   );
