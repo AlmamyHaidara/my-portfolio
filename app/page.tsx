@@ -1,8 +1,9 @@
-import Status from "@/components/Status";
 import { cn } from "@/lib/utils";
 import { Code, Github, Infinity, Linkedin } from "lucide-react";
 import Link from "next/link";
-import Spacing from '../src/components/Spacing';
+import Spacing from "../src/components/Spacing";
+import Status from "@/components/Status/Status";
+import Realisation from "@/components/Realisation";
 
 const styleClass = {
   badge:
@@ -11,56 +12,78 @@ const styleClass = {
 export default function Home() {
   return (
     <div className=" w-full h-full flex justify-start mt-16 flex-col ">
-      
-        <section className=" w-full h-96 flex justify-center flex-col my-5 items-start">
-          <div className="flex justify-start mt-5 items-center">
-            <div className="rounded-full  mr-5">
-              <img
-                src={"/assets/images/logo1.png"}
-                className="rounded-[100%] object-cover w-[100px] h-[100px]"
-                alt="alt"
-              />
-            </div>
-
-            <span className="flex flex-col">
-              <p className="text-3xl max-sm:text-xl font-semibold">Almamy Ali Haïdara</p>
-              <p className="text-xl  max-sm:text-base  font-extralight text-primary">
-                Fullstack Developer and Devops
-              </p>
-            </span>
+      <section className=" w-full h-96 flex justify-center flex-col my-5 items-start">
+        <div className="flex justify-start mt-5 items-center">
+          <div className="rounded-full  mr-5">
+            <img
+              src={"/assets/images/logo1.png"}
+              className="rounded-[100%] object-cover w-[100px] h-[100px]"
+              alt="alt"
+            />
           </div>
-          <div className="w-full h-auto  text-lg font-sans font-light pl-8 ">
-            <p className="text-2xl max-sm:text-xl font-medium my-2 ">
+
+          <span className="flex flex-col">
+            <p className="text-3xl max-sm:text-xl font-semibold">
+              Almamy Ali Haïdara
+            </p>
+            <p className="text-xl  max-sm:text-base  font-extralight text-primary">
               Fullstack Developer and Devops
             </p>
-            <p className="italic text-pretty font-sans">
-              Je suis un développeur{" "}
-              <Link href={"#"} className={cn(`${styleClass.badge}`)}>
-                <Code size={16} />
-                fullstack
-              </Link>{" "}
-              et junior{" "}
-              <Link href={"#"} className={cn(`${styleClass.badge}`)}>
-                {" "}
-                <Infinity size={16} /> DevOps
-              </Link>
-              , passionné par la création d'applications performantes et
-              sécurisées. J’aime partager mes connaissances à travers mes
-              projets et mes réseaux comme{" "}
-              <Link href={"#"} className={cn(`${styleClass.badge}`)}>
-                <Github size={16} /> GitHub
-              </Link>
-              ,
-              <Link href={"#"} className={cn(`${styleClass.badge}`)}>
-                <Linkedin size={16} /> LinkedIn
-              </Link> 
-              .
-            </p>
-          </div>
-        </section>
-    <Spacing size="md"/>
-      <section>
+          </span>
+        </div>
+        <div className="w-full h-auto  text-lg font-sans font-light  ">
+          <p className="text-2xl max-sm:text-xl font-medium my-2 ">
+            Fullstack Developer and Devops
+          </p>
+          <p className="italic text-pretty font-sans">
+            Je suis un développeur{" "}
+            <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+              <Code size={16} />
+              fullstack
+            </Link>{" "}
+            et junior{" "}
+            <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+              {" "}
+              <Infinity size={16} /> DevOps
+            </Link>
+            , passionné par la création d'applications performantes et
+            sécurisées. J’aime partager mes connaissances à travers mes projets
+            et mes réseaux comme{" "}
+            <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+              <Github size={16} /> GitHub
+            </Link>
+            ,
+            <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+              <Linkedin size={16} /> LinkedIn
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+      <section >
+      <Spacing size="md" />
+        <div >
+          <span className="text-lg font-semibold pb-2">Realisations</span>
+          <p className="text-lg pb-2 text-muted-foreground">
+            Je crée des applications et des outils pour être rentable et aider
+            les gens avec mes compétences.
+          </p>
+        </div>
         <Status />
+      </section>
+
+      <section >
+      <Spacing size="md" />
+        <div className="my-5">
+          <span className="text-lg font-semibold pb-2">Comment puis-je vous aider?          </span>
+          <p className="text-lg pb-2 text-muted-foreground">
+          Je peux créer <span className="font-semibold">parfait</span> expériences pour votre client, faire toutes les applications à partir de zéro.
+
+
+          </p>
+        </div>
+        <Realisation />
+
       </section>
     </div>
   );
