@@ -1,9 +1,21 @@
+
 import { cn } from "@/lib/utils";
-import { ArrowBigLeft, ArrowBigRight, Code, Github, Infinity, Linkedin, Rows, Rows2Icon } from "lucide-react";
+import {
+  ArrowBigDown,
+  ArrowBigLeft,
+  ArrowBigRight,
+  Code,
+  Github,
+  Infinity,
+  Linkedin,
+  Rows,
+  Rows2Icon,
+} from "lucide-react";
 import Link from "next/link";
 import Spacing from "../src/components/Spacing";
 import Status from "@/components/Status/Status";
 import Realisation from "@/components/Realisation";
+import { Button } from "@/components/ui/button";
 
 const styleClass = {
   badge:
@@ -58,6 +70,18 @@ export default function Home() {
             </Link>
             .
           </p>
+        </div>
+        <div className="py-8 w-full ">
+          <Link href="/mon-cv.pdf" download>
+            {/* <a download> */}
+              <Button
+                className="w-52 flex items-center justify-between font-semibold outline"
+                variant="outline"
+              >
+                Telecharger Mon CV <ArrowBigDown className="animate-bounce" />{" "}
+              </Button>
+            {/* </a> */}
+          </Link>
         </div>
       </section>
       <section className="">
@@ -126,10 +150,10 @@ export default function Home() {
             concept initial au déploiement, aussi bien sur des environnements
             web que mobiles...{" "}
           </p>
-            <Link href={"#"} className={cn(`${styleClass.badge}`)}>
-              En savoir plus
-              <ArrowBigRight size={16} /> 
-            </Link>
+          <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+            En savoir plus
+            <ArrowBigRight size={16} />
+          </Link>
         </div>
         {/* <Status /> */}
       </section>

@@ -101,3 +101,26 @@ export const CONTACTME: ContactMeType[] = [
     }
   ];
   
+
+  export const NetWorkData = [
+    {
+      path:"https://www.linkedin.com/in/almamy-ha%C3%AFdara-612028210/",
+      alt:"https://www.linkedin.com/in/almamy-ha%C3%AFdara-612028210/",
+      img:"/assets/images/linkedin.svg"
+    },
+    {
+      path:"mailto:almamyh27@gmail.com",
+      alt:"almamyh27@gmail.com",
+      img:"/assets/images/gmail.svg"
+    },
+    {
+      path:"mailto:almamy_haidara@yahoo.com",
+      alt:"almamy_haidara@yahoo.com",
+      img:"/assets/images/yahoo-v2.svg"
+    },
+    {
+      path:"#",
+      alt:"whatsapp",
+      img:"/assets/images/whatsapp.svg"
+    },
+  ]

@@ -30,7 +30,7 @@ const navigation= [
 ]
 function Header() {
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
   const currentPath = usePathname();
   const isActivate = (path:string) => (currentPath === path ? "border-b-3 max-md:rounded-none shadow-sl shadow-primary/10 bg-primary/15 text-primary  rounded-md " : "")
