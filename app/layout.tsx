@@ -39,7 +39,7 @@ export default function RootLayout({
           <Header />
         </div>
         <div className="gap-5">
-          <div className="circlePosition w-[260px] h-[400px] bg-primary/35 rounded-b-3xl absolute z-1 top-[20%] right-[20%] translate-x-[50%] translate-y-[-50%] rotate-45 blur-[90px]"></div>
+          <div className="circlePosition w-[260px] h-[400px]  max-md:h-[300px] bg-primary/35 rounded-b-3xl absolute z-1 top-[20%] right-[20%]  max-md:right-[40%]  translate-x-[50%] translate-y-[-50%] rotate-45 blur-[90px]"></div>
         </div>
         <div className="">
 
