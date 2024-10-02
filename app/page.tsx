@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Code, Github, Infinity, Linkedin } from "lucide-react";
+import { ArrowBigLeft, ArrowBigRight, Code, Github, Infinity, Linkedin, Rows, Rows2Icon } from "lucide-react";
 import Link from "next/link";
 import Spacing from "../src/components/Spacing";
 import Status from "@/components/Status/Status";
@@ -60,9 +60,9 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section >
-      <Spacing size="md" />
-        <div >
+      <section className="">
+        <Spacing size="md" />
+        <div>
           <span className="text-lg font-semibold pb-2">Realisations</span>
           <p className="text-lg pb-2 text-muted-foreground">
             Je crée des applications et des outils pour être rentable et aider
@@ -72,18 +72,66 @@ export default function Home() {
         <Status />
       </section>
 
-      <section >
-      <Spacing size="md" />
+      <section className="">
+        <Spacing size="md" />
         <div className="my-5">
-          <span className="text-lg font-semibold pb-2">Comment puis-je vous aider?          </span>
+          <span className="text-lg font-semibold pb-2">
+            Comment puis-je vous aider?{" "}
+          </span>
           <p className="text-lg pb-2 text-muted-foreground">
-          Je peux créer <span className="font-semibold">parfait</span> expériences pour votre client, faire toutes les applications à partir de zéro.
-
-
+            {/* Je peux vous creer des application securiser avec une <span className="font-semibold">meuilleur</span> expériences pour vos utilisateur avec des technologie de haut niveau telque:  */}
+            Je peux vous aider à créer des applications sécurisées, offrant une
+            expérience utilisateur optimale, en utilisant des technologies de
+            pointe telles que <span className="font-semibold">TypeScript</span>,{" "}
+            <span className="font-semibold">Next.js</span>,{" "}
+            <span className="font-semibold">Tailwind CSS</span>,{" "}
+            <span className="font-semibold">PostgreSQL</span>, et{" "}
+            <span className="font-semibold">Vercel</span>. Mon expertise dans
+            ces outils me permet de développer des solutions performantes,
+            évolutives et parfaitement adaptées à vos besoins.
           </p>
         </div>
         <Realisation />
+      </section>
 
+      <section className="">
+        <Spacing size="md" />
+        <div className="my-5">
+          <span className="text-lg font-semibold pb-2">À propos de moi</span>
+          <p className="text-lg pb-5 text-muted-foreground">
+            Développeur Full-Stack passionné et certifié{" "}
+            <span className="font-semibold">Azure Administrator (AZ-104)</span>,
+            je conçois des applications modernes et sécurisées, tout en
+            garantissant une expérience utilisateur optimale. Mon expertise
+            couvre non seulement le développement web avec des technologies
+            telles que
+            <span className="font-semibold">TypeScript</span>,{" "}
+            <span className="font-semibold">Next.js</span>,{" "}
+            <span className="font-semibold">Tailwind CSS</span>,
+            <span className="font-semibold">PostgreSQL</span>, et{" "}
+            <span className="font-semibold">Vercel</span>,mais également le
+            développement mobile avec{" "}
+            <span className="font-semibold">React Native</span>, et{" "}
+            <span className="font-semibold">Expo</span>.
+          </p>
+
+          <p className="text-lg pb-2 text-muted-foreground">
+            En tant que professionnel DevOps, je maîtrise des outils tels que l’
+            <span className="font-semibold">Infrastructure as Code (IaC)</span>,
+            avec <span className="font-semibold">Terraform</span>, la création
+            de pipelines CI/CD avec{" "}
+            <span className="font-semibold">Azure Pipelines</span>, et la
+            gestion des conteneurs via Docker. Cette combinaison de compétences
+            me permet de gérer l’intégralité du cycle de vie d’un projet, du
+            concept initial au déploiement, aussi bien sur des environnements
+            web que mobiles...{" "}
+          </p>
+            <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+              En savoir plus
+              <ArrowBigRight size={16} /> 
+            </Link>
+        </div>
+        {/* <Status /> */}
       </section>
     </div>
   );
