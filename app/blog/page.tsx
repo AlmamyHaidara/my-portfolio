@@ -11,7 +11,7 @@ import Link from "next/link";
 export default async function Page() {
   const posts = await getPosts();
   return (
-    <div className=" w-full h-full flex justify-start mt-16 flex-col ">
+    <div className=" w-full h-full flex justify-start mt-16 flex-col gap-5 ">
       {posts.map((post) => (
         <Card key={post.slug}>
           <CardHeader>
