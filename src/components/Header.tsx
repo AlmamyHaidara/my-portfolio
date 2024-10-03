@@ -19,13 +19,13 @@ const navigation= [
   },
   {
     id:3,
-    path:'/blog',
-    title:"Blog"
+    path:'/outil',
+    title:"Outil"
   },
   {
     id:4,
-    path:'#',
-    title:"Contact"
+    path:'/blog',
+    title:"Blog"
   },
 ]
 function Header() {

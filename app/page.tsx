@@ -54,25 +54,25 @@ export default function Home() {
               fullstack
             </Link>{" "}
             et junior{" "}
-            <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+            <Link href={"https://www.atlassian.com/fr/devops/what-is-devops/devops-engineer#:~:text=Un%20ing%C3%A9nieur%20DevOps%20aura%20de,des%20r%C3%A9seaux%20internes%20et%20externes."} target="_blank" className={cn(`${styleClass.badge}`)}>
               {" "}
               <Infinity size={16} /> DevOps
             </Link>
             , passionné par la création d'applications performantes et
             sécurisées. J’aime partager mes connaissances à travers mes projets
             et mes réseaux comme{" "}
-            <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+            <Link href={"https://github.com/AlmamyHaidara"} target="_blank" className={cn(`${styleClass.badge}`)}>
               <Github size={16} /> GitHub
             </Link>
             ,
-            <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+            <Link href={"https://www.linkedin.com/in/almamy-ha%C3%AFdara-612028210/"} target="_blank" className={cn(`${styleClass.badge}`)}>
               <Linkedin size={16} /> LinkedIn
             </Link>
             .
           </p>
         </div>
         <div className="py-8 w-full ">
-          <Link href="/mon-cv.pdf" download>
+          <Link href="/mon-cv.pdf" target="_blank" download>
             {/* <a download> */}
               <Button
                 className="w-52 flex items-center justify-between font-semibold outline"

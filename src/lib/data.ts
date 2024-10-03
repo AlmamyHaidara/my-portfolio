@@ -124,3 +124,38 @@ export const CONTACTME: ContactMeType[] = [
       img:"/assets/images/whatsapp.svg"
     },
   ]
+
+
+  // data/tools.js
+export const toolsData = [
+  {
+    category: "Création de vidéos",
+    tools: ["Final Cut Pro", "Screen Studio", "OBS", "Excalidraw"],
+  },
+  {
+    category: "Code",
+    tools: ["VSCode", "GitHub's Copilot", "GitHub", "Git"],
+  },
+  {
+    category: "Création de contenu",
+    tools: ["TypeFully", "Cal.com", "ShowCode"],
+  },
+  {
+    category: "SaaS dont je suis utilisateur",
+    tools: ["ChatGPT", "Jomo", "NomadList", "MailerLite", "Front"],
+  },
+  {
+    category: "Applications MacOS",
+    tools: [
+      "Raycast", "CleanShot X", "CleanMyMac", "1Password", "Things", "TimeMator",
+      "SparkApp", "iTerm", "Clop", "Endel", "BetterDictation", "Beeper", "NUMI",
+    ],
+  },
+  {
+    category: "CI/CD",
+    tools: [
+      "Vercel", "Upstash", "Neon.tech", "Trigger.dev", "Render.com", "Porkbun",
+      "Plausible", "Stripe",
+    ],
+  },
+];
