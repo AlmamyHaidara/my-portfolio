@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Spacing from '../src/components/Spacing';
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,13 @@ export default function RootLayout({
           `${geistSans.variable} ${geistMono.variable} antialiased h-full max-w-5xl m-auto px-4 `
         )}
       >
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+
         <div className="pt-5">
           <Header />
         </div>
@@ -51,6 +59,7 @@ export default function RootLayout({
         <div className="pt-5">
           <Footer />
         </div>
+        </ThemeProvider>
       </body>
     </html>
   );

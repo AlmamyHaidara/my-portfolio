@@ -75,8 +75,7 @@ export default function Home() {
           <Link href="/mon-cv.pdf" target="_blank" download>
             {/* <a download> */}
               <Button
-                className="w-52 flex items-center justify-between font-semibold outline"
-                variant="outline"
+                className="w-52 flex items-center justify-between font-semibold "
               >
                 Telecharger Mon CV <ArrowBigDown className="animate-bounce" />{" "}
               </Button>

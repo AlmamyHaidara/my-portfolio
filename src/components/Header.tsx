@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
+import { ModeToggle } from './ModeToggle'
 
 const navigation= [
   {
@@ -14,13 +15,13 @@ const navigation= [
   },
   {
     id:2,
-    path:'/projets',
-    title:"Mes projets"
+    path:'/outil',
+    title:"Outil"
   },
   {
     id:3,
-    path:'/outil',
-    title:"Outil"
+    path:'/projets',
+    title:"Mes projets"
   },
   {
     id:4,
@@ -44,7 +45,7 @@ function Header() {
   }
   return (
    <header className='flex items-center gap-2'>
-    <Link href="/" className='rounded-full flex md:w-[14%] max-sm:bg-yellow-500  justify-between items-center'>
+    <Link href="/" className='rounded-full flex md:w-[14%] max-md:w-full justify-between items-center'>
     <Image src={"/assets/images/logo1.png"} alt="alt" width={50} height={20} className='rounded-full'/>
     <p className='font-extrabold text-3xl sm:text-xl max-lg:hidden '>Code<span className=' text-primary'>Craft</span></p>
     </Link>
@@ -67,6 +68,8 @@ function Header() {
     <Link href={nav.path}  key={index} className={cn(`${'text-primary border-primary transition-colors duration-500 p-2 max-md:hover:bg-primary/20 max-md:hover:transition-colors max-md:hover:duration-500 flex max-md:justify-start max-md:pl-10 '}  ${isActivate(nav.path)}`)}  >{nav.title}</Link>
   ))
 }
+<ModeToggle />
+
 </div>
     {/* <Link href="/" className='text-primary'>Acceuil</Link>
     <Link href="/blog"  className={cn(`${'text-primary border-b-2  border-blue-700'} ${({ isActive }:{isActive:boolean}) => (isActive ? "bg-red-500" : "")} `)}>Blog</Link>
