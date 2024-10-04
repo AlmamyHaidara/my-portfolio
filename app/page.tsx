@@ -32,7 +32,7 @@ export default function Home() {
               className="rounded-[100%] object-cover w-[100px] h-[100px]"
               alt="alt"
             />
-          </div>
+          </div>Page
 
           <span className="flex flex-col">
             <p className="text-3xl max-sm:text-xl font-semibold">
@@ -149,7 +149,7 @@ export default function Home() {
             concept initial au déploiement, aussi bien sur des environnements
             web que mobiles...{" "}
           </p>
-          <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+          <Link href={"/a-propos"} className={cn(`${styleClass.badge}`)}>
             En savoir plus
             <ArrowBigRight size={16} />
           </Link>

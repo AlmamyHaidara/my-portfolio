@@ -17,7 +17,7 @@ export const MdxTag = (props: MdxTagProps) => {
   return (
    
 
-<Link href={props.href} className={cn(`${styleClass.badge}`)}>
+<Link target="_blank" href={props.href} className={cn(`${styleClass.badge}`)}>
 <Tags size={16} />
 {props.children}
 </Link>

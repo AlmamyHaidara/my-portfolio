@@ -12,19 +12,23 @@ const navigation = [
     id: 1,
     path: "/",
     title: "Acceuil",
+  }, {
+    id: 2,
+    path: "/a-propos",
+    title: "À propos de moi",
   },
   {
-    id: 2,
+    id: 3,
     path: "/outil",
     title: "Outil",
   },
   {
-    id: 3,
+    id: 4,
     path: "/projets",
     title: "Mes projets",
   },
   {
-    id: 4,
+    id: 5,
     path: "/blog",
     title: "Blog",
   },
