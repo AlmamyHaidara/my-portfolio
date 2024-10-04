@@ -22,6 +22,7 @@ export type ContactMeType = {
 };
 
 export type ProjectTye = {
+  [x: string]: Url;
   image: string;
   name:string;
   mediumImage: string;

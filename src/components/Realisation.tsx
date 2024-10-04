@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "./ui/card";
 import { ProjectTye } from "@/lib/types";
 import { RealisationData } from "@/lib/data";
+import Link from "next/link";
 
 function Realisation() {
   return (
@@ -23,6 +24,7 @@ export default Realisation;
 
 function Project(props: ProjectTye) {
   return (
+    <Link href={props.path}>
     <Card className="p-3 bg-accent/10 hover:bg-primary/10  transition-colors group flex flex-col items-center gap-4 ">
       <div className="relative w-full flex flex-col items-center justify-center">
         <img
@@ -44,5 +46,6 @@ function Project(props: ProjectTye) {
         <p className="text-xs text-muted-foreground">{props.description}</p>
       </div>
     </Card>
+    </Link>
   );
 }

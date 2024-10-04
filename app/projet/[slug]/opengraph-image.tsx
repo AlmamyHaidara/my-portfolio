@@ -1,7 +1,8 @@
 import { Post } from "@/lib/posts";
-import { ImageResponse } from "next/og";
+// import { ImageResponse } from "next/og";
 import { OgImage } from "./OgImage";
 import { getUrl } from "./getUrl";
+import { ImageResponse } from "next/dist/compiled/@vercel/og";
 
 const URL = getUrl();
 
