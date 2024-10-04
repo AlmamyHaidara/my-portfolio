@@ -38,7 +38,7 @@ export const OgImage = ({ post, url }: OgImageProps) => {
           }}
           tw="text-3xl font-bold m-0"
         >
-          Codelynx
+          CodeCraft
         </p>
         <p tw="text-xl m-0 mt-12">
           {new Date(post.publishedAt).toLocaleDateString()}
@@ -54,11 +54,11 @@ export const OgImage = ({ post, url }: OgImageProps) => {
         >
           <img
             alt="x"
-            src={"https://melvynx.com/images/my-face.png"}
+            src={"/assets/images/logo1.png"}
             width={64}
             height={64}
           />
-          <p tw="text-4xl m-0">Melvynx</p>
+          <p tw="text-4xl m-0">Almamy Ali Haïdara</p>
         </div>
       </div>
     </div>

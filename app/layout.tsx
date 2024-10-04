@@ -30,12 +30,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en"  >
       <body
         className={cn(
-          // `${geistSans.variable} ${geistMono.variable} antialiased h-full max-w-5xl m-auto px-4 `
           `${geistSans.variable} ${geistMono.variable} antialiased h-full max-w-full m-auto px-4 `
         )}
+        suppressHydrationWarning={true}
       >
         <ThemeProvider
             attribute="class"

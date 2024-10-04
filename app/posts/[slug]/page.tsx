@@ -25,7 +25,7 @@ export const generateMetadata = async (props: {
 };
 
 export default async function RoutePage(props: { params: { slug: string } }) {
-  const post =  await getMakdown(props.params.slug);
+  const post:any =  await getMakdown(props.params.slug);
 
   if (!post) {
     notFound();

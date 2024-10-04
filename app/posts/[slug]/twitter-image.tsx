@@ -5,7 +5,7 @@ import { getUrl } from "./getUrl";
 
 const URL = getUrl();
 
-export const alt = "Codelynx posts image preview";
+export const alt = "CodeCraft posts image preview";
 export const size = {
   width: 1200,
   height: 630,
