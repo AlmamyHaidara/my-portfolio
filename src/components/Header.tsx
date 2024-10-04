@@ -15,7 +15,7 @@ const navigation = [
   }, {
     id: 2,
     path: "/a-propos",
-    title: "À propos de moi",
+    title: "À propos",
   },
   {
     id: 3,
