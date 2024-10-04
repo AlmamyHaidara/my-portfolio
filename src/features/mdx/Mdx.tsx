@@ -7,6 +7,7 @@ export const Mdx = ({ children }: { children: string }) => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <MDXRemote
+        
         source={children}
         options={{
           mdxOptions: {

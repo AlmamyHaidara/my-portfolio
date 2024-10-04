@@ -9,7 +9,7 @@ export type MdxPreProps = ComponentPropsWithoutRef<"pre"> & {
 export const MdxPre = ({ children, className, ...props }: MdxPreProps) => {
   console.log({ props });
   return (
-    <div className="mb-4 rounded-t-lg bg-accent">
+    <div className="mb-4 rounded-t-lg bg-primary/50">
       <div className="flex items-center gap-2 px-2 py-1.5">
         <div className="flex items-center space-x-1.5">
           <span className="block size-2.5 rounded-full bg-red-500"></span>

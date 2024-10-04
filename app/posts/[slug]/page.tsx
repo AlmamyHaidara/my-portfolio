@@ -32,16 +32,19 @@ export default async function RoutePage(props: { params: { slug: string } }) {
   }
 
   return (
-    <div className="prose prose-sm lg:prose-lg ">
+    <div className="prose prose-sm lg:prose-lg text-muted-foreground ">
       <div className="flex items-center gap-2">
-        <p className="text-xs">
+        <p className="text-xs text-muted-foreground ">
           {new Date(post.publishedAt).toLocaleDateString()}
         </p>
         <ViewCount slug={props.params.slug} />
       </div>
-      <div>
-        <h1 >{post.title}</h1>
+      <div className="text-muted-foreground">
+        <h1 className="text-muted-foreground">{post.title}</h1>
+        <div className="!text-muted-foreground">
+
         <Mdx>{post.content}</Mdx>
+        </div>
       </div>
     </div>
   );
