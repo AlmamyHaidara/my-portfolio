@@ -9,7 +9,7 @@ export const dynamic = "force-static";
 export const generateMetadata = async (props: {
   params: { slug: string };
 }): Promise<Metadata> => {
-  const post =  await getMakdown(props.params.slug);
+  const post =  await getMakdown(props.params.slug,"/app/content/projets");
 
   if (!post) {
     return {
@@ -25,7 +25,7 @@ export const generateMetadata = async (props: {
 };
 
 export default async function RoutePage(props: { params: { slug: string } }) {
-  const post =  await getMakdown(props.params.slug);
+  const post =  await getMakdown(props.params.slug,"/app/content/projets");
 
   if (!post) {
     notFound();

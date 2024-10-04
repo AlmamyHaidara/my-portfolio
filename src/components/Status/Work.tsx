@@ -16,7 +16,7 @@ function Work(props: Post) {
         
         <h3 className="text-base font-medium text-gray-800 ">{props.title}</h3>
       {props.freelance && <Badge variant="outline">Mission</Badge>}</div>
-        <p className="text-sm text-muted-foreground w-[95%]">{props.description}</p>
+        <p className="text-sm text-muted-foreground w-[95%] line-clamp-2 text-ellipsis">{props.description}</p>
       </div>
       {/* <p className="text-sm text-muted-foreground">{props.publishedAt}</p> */}
     </Link>

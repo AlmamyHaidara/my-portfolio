@@ -18,10 +18,12 @@ export type Post = z.infer<typeof PostSchema> & {
 };
 
 export const getMakdowns = async (dirName="/app/content/posts") => {
+  console.log("---dirName",dirName);
+  
   const postsDirectory = path.join(process.cwd(), dirName);
   const files = await fs.readdir(postsDirectory);
   const fileNames = files.filter((f) => f.endsWith(".mdx"));
-  
+
   const posts: Post[] = [];
   for await (const fileName of fileNames) {
     const fullPath = path.join(postsDirectory, fileName);
@@ -52,8 +54,8 @@ export const getMakdowns = async (dirName="/app/content/posts") => {
   return posts;
 };
 
-export const getMakdown = async (slug: string) => {
-  const posts =  await getMakdowns();
+export const getMakdown = async (slug: string, dir:string) => {
+  const posts = await getMakdowns(dir);
   console.log("yyyyy",posts);
   return posts.find((post) => post.slug === slug);
 };
