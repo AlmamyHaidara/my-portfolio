@@ -8,7 +8,7 @@ export const GET = async (
 ) => {
   const { slug } = props.params;
 
-  const post =  await getMakdown(slug);
+  const post =  await getMakdown(slug,"/app/content/posts");
 
   return NextResponse.json(post);
 };
