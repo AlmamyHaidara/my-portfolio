@@ -1,6 +1,6 @@
 import { Alert } from "@/components/ui/alert";
 import { cn } from "@/lib/utils";
-import { Code, Notebook, Tag, Tags } from "lucide-react";
+import {  Hash } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -11,14 +11,16 @@ export type MdxTagProps = {
 
 const styleClass = {
   badge:
-    "relative rounded bg-primary/10 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold inline-flex items-center gap-2 hover:bg-primary/20 transition-colors hover:underline text-primary",
+    "relative rounded-md flex-wrap bg-transparent px-[0.3rem]  no-underline  py-[0.2rem] font-mono text-sm font-semibold inline-flex items-center gap-2 transition-colors  text-primary",
+    // "relative font-mono text-sm font-semibold inline-flex items-center gap-6 text-primary bg-white shadow-md rounded-sm overflow-hidden transition-all transform hover:scale-105 hover:bg-primary/20
+
 };
 export const MdxTag = (props: MdxTagProps) => {
   return (
    
 
-<Link target="_blank" href={props.href} className={cn(`${styleClass.badge}`)}>
-<Tags size={16} />
+<Link href={props.href} className={cn(`${styleClass.badge}`)}>
+<Hash size={16} />
 {props.children}
 </Link>
   );

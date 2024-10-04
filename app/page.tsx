@@ -32,7 +32,7 @@ export default function Home() {
               className="rounded-[100%] object-cover w-[100px] h-[100px]"
               alt="alt"
             />
-          </div>Page
+          </div>
 
           <span className="flex flex-col">
             <p className="text-3xl max-sm:text-xl font-semibold">
