@@ -50,14 +50,14 @@ export default function RootLayout({
         <div className="gap-5 z-0">
           <div className="z-0 circlePosition w-[260px] h-[400px] max-md:h-[300px] bg-primary/35 rounded-b-3xl absolute z-1 top-[30%] right-[20%]  max-md:right-[40%]  translate-x-[50%] translate-y-[-50%] rotate-45 blur-[90px]"></div>
         </div>
-        <div className=" max-w-full flex flex-1 justify-center items-center max-md:px-[3.5%] md:px-[20%]">
+        <div className=" max-w-full flex flex-1 justify-center items-center max-md:px-[3.5%] md:px-[20%] ">
 
         {children}
         </div>
         <div className="">
           <Spacing />
         </div>
-        <div className="items-center  md:px-[18.6%]">
+        <div className="items-center  md:px-[18.6%] ">
           <Footer />
         </div>
         </ThemeProvider>

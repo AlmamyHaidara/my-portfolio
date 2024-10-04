@@ -1,15 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import { SideProjectType } from "@/lib/types"; // Assurez-vous que le chemin est correct
+import { Post } from "@/lib/posts";
 
-function SideProject(props: SideProjectType) {
+function SideProject(props: Post) {
   return (
     <Link
-      href={props.url}
+      href={`/projet/${props.slug}`}
       className="inline-flex items-center gap-4 hover:bg-primary/10 rounded-sm transition-colors p-1"
     >
-      <span className="bg-primary/10  text-accent-foreground p-3 rounded-sm">
-        <props.logo />
+      <span className="w-[15%] h-20  text-accent-foreground p-3 rounded-full">
+        {/* <props.logo /> */}
+        <img
+        src={props.cover || "/default-cover.jpg"}
+        alt={props.title}
+        className="w-full h-full object-cover rounded-md"
+      />
       </span>
       <div>
         <p className="text-lg font-semibold">{props.title}</p>

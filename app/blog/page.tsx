@@ -5,11 +5,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getPosts } from "@/lib/posts";
+import { getMakdowns } from "@/lib/posts";
 import Link from "next/link";
 
 export default async function Page() {
-  const posts = await getPosts();
+  const posts =  await getMakdowns();
   return (
     <div className=" w-full h-full flex justify-start mt-16 flex-col gap-5 ">
       {posts.map((post) => (
@@ -26,7 +26,7 @@ export default async function Page() {
               className="text-blue-500 hover:underline"
               href={`/posts/${post.slug}`}
             >
-              Read more
+              En savoir plus
             </Link>
           </CardFooter>
         </Card>

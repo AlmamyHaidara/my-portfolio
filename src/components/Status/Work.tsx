@@ -1,29 +1,24 @@
 import { WorkType } from "@/lib/types";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
+import { Post } from "@/lib/posts";
 
-function Work(props: WorkType) {
+function Work(props: Post) {
   return (
-    <Link
-      href={props.url}
-      className="inline-flex items-center gap-4 hover:bg-primary/10 rounded-sm transition-colors p-1"
-    >
-      {/* <span className='bg-primary/10  text-accent-foreground p-3 rounded-sm'> */}
+    <Link href={`/projet/${props.slug}`} className="flex items-center gap-4 p-1 rounded-lg hover:bg-primary/10 transition-colors">
       <img
-        src={props.image}
+        src={props.cover || "/default-cover.jpg"}
         alt={props.title}
-        className="w-10 h-6 object-contain"
+        className="w-12 h-12 object-cover rounded-md"
       />
-      {/* </span> */}
       <div className="mr-auto">
-        <div className="flex">
-          <p className="text-lg font-semibold mr-5">{props.title}</p>
-          {props.freelance && <Badge variant={"outline"} >Misson</Badge>}
-        </div>
-        <p className="text-xs text-muted-foreground">{props.role}</p>
+      <div className="flex gap-5">
+        
+        <h3 className="text-base font-medium text-gray-800 ">{props.title}</h3>
+      {props.freelance && <Badge variant="outline">Mission</Badge>}</div>
+        <p className="text-sm text-muted-foreground w-[95%]">{props.description}</p>
       </div>
-
-        <p className="text-sm text-muted-foreground text-end">{props.date}</p>
+      {/* <p className="text-sm text-muted-foreground">{props.publishedAt}</p> */}
     </Link>
   );
 }
