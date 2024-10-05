@@ -8,57 +8,28 @@ export type OgImageProps = {
 
 export const OgImage = ({ post, url }: OgImageProps) => {
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-
-        position: "relative",
-        gap: 16,
-
-        color: "white",
-        backgroundColor: "#090910",
-        opacity: "1",
-      }}
-    >
+    <div className="w-full h-full flex flex-col relative gap-4 text-white bg-[#090910] opacity-100">
       <img
         src={`${url}/og.png`}
         alt="bg"
-        tw="absolute flex top-0 left-0 right-0 bottom-0"
+        className="absolute flex inset-0"
       />
-      <div
-        tw="flex flex-col justify-start items-start h-full flex-1 px-16 py-24"
-        style={{ gap: 16 }}
-      >
-        <p
-          style={{
-            fontFamily: "Space Grotesk",
-          }}
-          tw="text-3xl font-bold m-0"
-        >
+      <div className="flex flex-col justify-start items-start h-full flex-1 px-16 py-24 gap-4">
+        <p className="text-3xl font-bold m-0" /*style={{ fontFamily: "Space Grotesk" }}*/ >
           CodeCraft
         </p>
-        <p tw="text-xl m-0 mt-12">
+        <p className="text-xl m-0 mt-3">
           {new Date(post.publishedAt).toLocaleDateString()}
         </p>
-        <p tw="text-6xl m-0 mt-0">{post.title}</p>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            marginTop: "auto",
-          }}
-        >
+        <p className="text-6xl m-0 mt-0">{post.title}</p>
+        <div className="flex items-center gap-2 mt-auto">
           <img
             alt="x"
-            src={"/assets/images/logo1.png"}
+            src="/assets/images/logo1.png"
             width={64}
             height={64}
           />
-          <p tw="text-4xl m-0">Almamy Ali Haïdara</p>
+          <p className="text-4xl m-0">Almamy Ali Haïdara</p>
         </div>
       </div>
     </div>

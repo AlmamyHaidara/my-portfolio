@@ -20,8 +20,7 @@ export const MdxPre = ({ children, className, ...props }: MdxPreProps) => {
         {props["data-language"] ? <code>{props["data-language"]}</code> : null}
       </div>
       <pre
-        className={cn("relative mt-0 overflow-auto lg:text-base", className)}
-        style={{ marginTop: 0, marginBottom: 0 }}
+        className={cn("relative mt-0 overflow-auto lg:text-base !my-0", className)}
         {...props}
       >
         {children}
