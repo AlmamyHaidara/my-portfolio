@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { Post } from "@/lib/posts";
+import Image from "next/image";
 
 export type OgImageProps = {
   post: Post;

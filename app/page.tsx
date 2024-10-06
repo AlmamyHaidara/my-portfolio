@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import {
   ArrowBigDown,
@@ -8,14 +7,16 @@ import {
   Github,
   Infinity,
   Linkedin,
-  Rows,
-  Rows2Icon,
 } from "lucide-react";
 import Link from "next/link";
 import Spacing from "../src/components/Spacing";
-import Status from "@/components/Status/Status";
-import Realisation from "@/components/Realisation";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+
+// Importations dynamiques
+const Status = dynamic(() => import('@/components/Status/Status'));
+const Realisation = dynamic(() => import('@/components/Realisation'));
 
 const styleClass = {
   badge:
@@ -31,6 +32,7 @@ export default function Home() {
               src={"/assets/images/logo1.png"}
               className="rounded-[100%] object-cover w-[100px] h-[100px]"
               alt="alt"
+             
             />
           </div>
 

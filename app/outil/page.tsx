@@ -1,6 +1,7 @@
 // pages/contact.js
 
 import { toolsData } from "@/lib/data";
+import Image from "next/image";
 import Link from "next/link";
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode, Key } from "react";
 
@@ -14,6 +15,7 @@ export default function Outils() {
             src="/assets/images/logo1.png"
             alt="Profile"
             className="rounded-full w-20 h-20"
+            
           />
           <div>
             <h1 className="text-3xl font-bold  text-muted-foreground ">Almamy Ali Haïdara</h1>

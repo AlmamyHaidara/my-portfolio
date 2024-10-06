@@ -53,7 +53,7 @@ function Header() {
         href="/"
         className="rounded-full flex md:w-[4%] max-md:w-full justify-between items-center"
       >
-        <Image
+        <img
           src={"/assets/images/logo1.png"}
           alt="alt"
           width={50}

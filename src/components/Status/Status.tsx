@@ -1,13 +1,7 @@
 import React from "react";
 import { Card } from "../ui/card";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
-import { Badge } from "../ui/badge";
-import { ContactMeType } from "@/lib/types";
-import { CONTACTME, SIDE_PROJECT } from "@/lib/data";
-import SideProject from "./SideProject";
+import { CONTACTME } from "@/lib/data";
 import { getMakdowns } from "@/lib/posts";
-import { Post } from '../../lib/posts';
 import Work from "./Work";
 import ContactMe from "./ContactMe";
 

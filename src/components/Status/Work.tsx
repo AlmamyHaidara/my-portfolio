@@ -2,6 +2,7 @@ import { WorkType } from "@/lib/types";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
 import { Post } from "@/lib/posts";
+import Image from "next/image";
 
 function Work(props: Post) {
   return (

@@ -2,6 +2,7 @@ import { ContactMeType } from "@/lib/types";
 import { Card } from "../ui/card";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 function ContactMe(props: ContactMeType) {
   return (

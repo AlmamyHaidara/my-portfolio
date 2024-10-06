@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { SideProjectType } from "@/lib/types"; // Assurez-vous que le chemin est correct
 import { Post } from "@/lib/posts";
+import Image from "next/image";
 
 function SideProject(props: Post) {
   return (
