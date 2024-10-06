@@ -10,6 +10,8 @@ import Link from "next/link";
 
 export default async function Page() {
   const posts =  await getMakdowns();
+  console.log(posts);
+  
   return (
     <div className=" w-full h-full flex justify-start mt-16 flex-col gap-5 ">
       {posts.reverse().map((post) => (
