@@ -1,3 +1,4 @@
+import { MdxCode } from "./MdxCode";
 import { MdxNote } from "./MdxNote";
 import { MdxPre } from "./MdxPre";
 import { MdxTag } from "./MdxTag";
@@ -7,5 +8,6 @@ export const MDX_COMPONENTS = {
   YouTube: MdxYouTube,
   Note: MdxNote,
   pre: MdxPre,
-  Tag:MdxTag
+  Tag:MdxTag,
+  Code:MdxCode
 };

@@ -31,12 +31,15 @@ export default async function RoutePage(props: { params: { slug: string } }) {
   }
 
   return (
-    <div className="prose prose-sm lg:prose-lg text-muted-foreground ">
+    // <div className="prose prose-sm lg:prose-lg text-muted-foreground ">
+    
+    <div className="prose prose-lg lg:prose-2xl text-muted-foreground ">
       
       <div className="text-muted-foreground pt-10">
         <h1 className="text-muted-foreground ">{post.title}</h1>
         <Mdx >{post.content}</Mdx>
       </div>
     </div>
+    
   );
 }

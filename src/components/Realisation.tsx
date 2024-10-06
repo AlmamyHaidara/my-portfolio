@@ -25,7 +25,7 @@ export default Realisation;
 
 function Project(props: ProjectTye) {
   return (
-    <Link href={props.path}>
+    <Link href={props.path} target="_blank">
     <Card className="p-3 bg-accent/10 hover:bg-primary/10  transition-colors group flex flex-col items-center gap-4 ">
       <div className="relative w-full flex flex-col items-center justify-center">
         <img

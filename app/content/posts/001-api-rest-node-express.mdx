@@ -1,0 +1,60 @@
+---
+title: "Comment Créer une API REST avec Node.js et Express : Guide Complet"
+description: "Apprenez à créer une API REST simple avec Node.js et Express pour gérer les requêtes HTTP et connecter votre frontend au backend."
+publishedAt: "2024-09-06"
+cover: "/assets/images/projets/api-node-express.png"
+freelance: true
+published: true
+---
+
+**Node.js** et **Express** sont des outils puissants pour créer des **API REST** évolutives. Dans cet article, nous allons explorer la création d'une API REST simple avec Node.js, qui permet de gérer des requêtes HTTP pour connecter un frontend au backend.
+
+## Configuration de base
+
+### Installation des dépendances
+
+
+```bash
+
+npm init -y
+npm install express mongoose dotenv
+
+```
+### Exemple de serveur Express
+
+```js
+
+const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+app.get('/api/users', (req, res) => {
+  res.send({ message: 'Liste des utilisateurs' });
+});
+
+app.listen(3000, () => {
+  console.log('Serveur démarré sur le port 3000');
+});
+
+```
+
+### Erreurs à éviter
+
+- **Oublier d'utiliser** <Code> express.json() </Code> : Cela peut empêcher votre serveur de lire correctement les données JSON envoyées dans les requêtes.
+
+- **Testez vos API avec Postman** pour vérifier les routes et les réponses avant d'intégrer le frontend.
+
+### Conseils
+
+- **Utilisez** <Code>.env </Code> **pour vos variables d'environnement** comme l'URL de la base de données et les clés secrètes.
+
+- **Testez vos API avec Postman** pour vérifier les routes et les réponses avant d'intégrer le frontend.
+---
+<div className="flex gap-4 w-full flex-wrap no-underline ">
+  <Tag href="https://nodejs.org/">Node.js</Tag> 
+  <Tag href="https://expressjs.com/">Express</Tag> 
+  <Tag href="https://git-scm.com/doc">Git</Tag> 
+  <Tag href="https://docs.github.com/">GitHub</Tag> 
+</div> 
+

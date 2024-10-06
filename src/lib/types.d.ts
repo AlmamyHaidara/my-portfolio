@@ -28,3 +28,13 @@ export type ProjectTye = {
   mediumImage: string;
   description?: string;
 };
+
+export type Tool = {
+  techno: string;
+  link: string;
+};
+
+export type ToolsData = {
+  category: string;
+  tools: Tool[];
+};

@@ -1,0 +1,55 @@
+---
+title: "Optimiser les Performances Web avec Tailwind CSS et Next.js"
+description: "Découvrez comment utiliser Tailwind CSS et Next.js pour améliorer la performance et la réactivité de vos sites web."
+publishedAt: "2024-10-06"
+cover: "/assets/images/projets/tailwind-nextjs.png"
+freelance: true
+published: true
+---
+
+**Tailwind CSS** avec **Next.js** permet de créer des sites rapides et réactifs.
+
+## Utilisation de Tailwind avec Next.js
+
+### Installation
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+```
+
+### Exemple d'utilisation
+
+```jsx
+export default function Home() {
+  return (
+    <div className="flex justify-center items-center h-screen bg-gray-100">
+      <h1 className="text-4xl font-bold">Hello, Tailwind CSS!</h1>
+    </div>
+  );
+}
+```
+### Erreurs courantes
+
+- **CSS non purgé** : Veillez à purger les classes inutilisées pour réduire la taille des fichiers CSS.
+
+```js
+// tailwind.config.js
+module.exports = {
+  purge: ['./pages/**/*.js', './components/**/*.js'],
+};
+```
+### Optimisations supplémentaires
+
+- **Lazy loading** des images pour améliorer les temps de chargement.
+
+```js
+<img src="/image.jpg" loading="lazy" alt="Exemple" />
+```
+---
+<div className="flex gap-4 w-full flex-wrap no-underline ">
+   <Tag href="https://tailwindcss.com/">Tailwind CSS</Tag> 
+   <Tag href="https://nextjs.org/">Next.js</Tag> 
+   <Tag href="https://git-scm.com/doc">Git</Tag> 
+   <Tag href="https://docs.github.com/">GitHub</Tag> 
+</div> 

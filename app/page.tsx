@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import {
   ArrowBigDown,
-  ArrowBigLeft,
   ArrowBigRight,
   Code,
   Github,
@@ -73,7 +72,7 @@ export default function Home() {
             .
           </p>
         </div>
-        <div className="py-8 w-full ">
+        <div className="pt-8 w-auto">
           <Link href="/mon-cv.pdf" target="_blank" download>
             {/* <a download> */}
               <Button

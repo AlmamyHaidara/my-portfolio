@@ -1,5 +1,5 @@
 import { Car, Code } from "lucide-react";
-import { ContactMeType, SideProjectType, WorkType } from "./types";
+import { ContactMeType, SideProjectType, ToolsData, WorkType } from "./types";
 
 export const WORKS: WorkType[] = [
   {
@@ -130,47 +130,40 @@ export const NetWorkData = [
 ];
 
 // data/tools.js
-export const toolsData = [
-  // {
-  //   category: "Création de vidéos",
-  //   tools: ["Final Cut Pro", "Screen Studio", "OBS", "Excalidraw"],
-  // },
+export const toolsData: ToolsData[] = [
   {
     category: "Code",
-    tools: ["VSCode", "tabnine", "GitHub", "GitLab", "AzureDevops", "Git"],
-  },
-  // {
-  //   category: "Création de contenu",
-  //   tools: ["TypeFully", "Cal.com", "ShowCode"],
-  // },
-  // {
-  //   category: "Applications MacOS",
-  //   tools: [
-  //     "Raycast", "CleanShot X", "CleanMyMac", "1Password", "Things", "TimeMator",
-  //     "SparkApp", "iTerm", "Clop", "Endel", "BetterDictation", "Beeper", "NUMI",
-  //   ],
-  // },
-  {
-    category: "CI/CD",
     tools: [
-      "Vercel",
-      "Upstash",
-      "Neon.tech",
-      "Trigger.dev",
-      "Render.com",
-      "Porkbun",
-      "Azure pipeline",
-      "",
-      // "Plausible", "Stripe",""
+      { techno: "VSCode", link: "https://code.visualstudio.com/" },
+      { techno: "Tabnine", link: "https://www.tabnine.com/" },
+      { techno: "GitHub", link: "https://github.com/" },
+      { techno: "GitLab", link: "https://about.gitlab.com/" },
+      { techno: "Azure DevOps", link: "https://azure.microsoft.com/en-us/services/devops/" },
+      { techno: "Git", link: "https://git-scm.com/" },
     ],
   },
   {
-    category: "Base de donnee",
-    tools: ["Mysql", "Prosgres SQl", "Mongo db", "Firebase", "Supabase"],
+    category: "Design",
+    tools: [
+      { techno: "Figma", link: "https://www.figma.com/" },
+      { techno: "Adobe XD", link: "https://www.adobe.com/fr/products/xd.html" },
+      { techno: "Sketch", link: "https://www.sketch.com/" },
+    ],
   },
   {
-    category: "SaaS dont je suis utilisateur",
-    tools: ["ChatGPT"],
-    // tools: ["ChatGPT", "Jomo", "NomadList", "MailerLite", "Front"],
+    category: "Testing",
+    tools: [
+      { techno: "Jest", link: "https://jestjs.io/" },
+      { techno: "Cypress", link: "https://www.cypress.io/" },
+      { techno: "Mocha", link: "https://mochajs.org/" },
+    ],
+  },
+  {
+    category: "Deployment",
+    tools: [
+      { techno: "Vercel", link: "https://vercel.com/" },
+      { techno: "Netlify", link: "https://www.netlify.com/" },
+      { techno: "Heroku", link: "https://www.heroku.com/" },
+    ],
   },
 ];

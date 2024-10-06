@@ -1,0 +1,58 @@
+---
+title: "Introduction à Next.js : Créez des Sites Web Performants"
+description: "Découvrez Next.js, un framework puissant basé sur React pour le rendu côté serveur et la génération de sites statiques. Idéal pour des applications performantes et SEO-friendly."
+publishedAt: "2024-09-12"
+cover: "/assets/images/projets/nextjs-intro.png"
+freelance: true
+published: true
+---
+
+**Next.js** est un framework basé sur **React** offrant des fonctionnalités telles que le rendu côté serveur (SSR) et la génération de sites statiques.
+
+## Exemple de page Next.js
+
+```js
+// pages/index.js
+export default function Home() {
+  return <h1>Bienvenue sur mon site Next.js !</h1>;
+}
+```
+
+## Rendu côté serveur (SSR)
+
+Le SSR dans Next.js permet d’améliorer le SEO et les performances.
+
+```js
+export async function getServerSideProps() {
+  const data = await fetch("https://api.example.com/data");
+  return {
+    props: {
+      data: await data.json(),
+    },
+  };
+}
+```
+
+## Erreurs à éviter
+
+- **Oublier d'utiliser** <Code>getServerSideProps</Code> **pour les données dynamiques** : Ne pas le faire peut ralentir le chargement de vos pages.
+- **Mauvaise gestion des erreurs d’API** : Toujours prévoir des conditions pour les erreurs réseau ou les API en échec.
+
+## Optimisations
+
+- **Lazy loading** : Améliorez les performances en chargeant les composants au moment où ils sont nécessaires.
+
+```js
+import dynamic from "next/dynamic";
+const Component = dynamic(() => import("./Component"));
+```
+--- 
+
+<div className="flex gap-4 w-full flex-wrap no-underline ">
+  {" "}
+  <Tag href="https://nextjs.org/">Next.js</Tag> <Tag href="https://reactjs.org/">
+    React
+  </Tag> <Tag href="https://vercel.com/">Vercel</Tag> <Tag href="https://git-scm.com/doc">
+    Git
+  </Tag> <Tag href="https://docs.github.com/">GitHub</Tag>{" "}
+</div>

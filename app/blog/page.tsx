@@ -12,7 +12,7 @@ export default async function Page() {
   const posts =  await getMakdowns();
   return (
     <div className=" w-full h-full flex justify-start mt-16 flex-col gap-5 ">
-      {posts.map((post) => (
+      {posts.reverse().map((post) => (
         <Card key={post.slug}>
           <CardHeader>
             <p className="text-xs text-muted-foreground">
@@ -26,7 +26,7 @@ export default async function Page() {
               className="text-blue-500 hover:underline"
               href={`/posts/${post.slug}`}
             >
-              En savoir plus
+              Découvrir
             </Link>
           </CardFooter>
         </Card>

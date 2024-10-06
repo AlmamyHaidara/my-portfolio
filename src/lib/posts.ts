@@ -4,7 +4,7 @@ import path from "path";
 import { z } from "zod";
 
 const PostSchema = z.object({
-  title: z.string().min(10).max(65),
+  title: z.string().min(10).max(75),
   description: z.string(),
   publishedAt: z.coerce.string(),
   cover: z.string().optional().default(""),

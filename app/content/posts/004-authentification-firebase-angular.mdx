@@ -1,0 +1,60 @@
+---
+title: "Authentification Firebase dans Angular : Tutoriel Pas à Pas"
+description: "Découvrez comment intégrer Firebase pour gérer l'authentification dans Angular, tout en sécurisant les routes et l'accès aux données."
+publishedAt: "2024-09-24"
+cover: "/assets/images/projets/firebase-auth-angular.png"
+freelance: true
+published: true
+---
+
+**Firebase** simplifie l'authentification dans les applications **Angular**.
+
+## Intégration de Firebase
+
+### Installation de Firebase dans Angular
+
+```bash
+ng add @angular/fire
+```
+
+### Exemple d'authentification
+
+```js
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+
+constructor(private afAuth: AngularFireAuth) {}
+
+login(email: string, password: string) {
+  this.afAuth.signInWithEmailAndPassword(email, password)
+    .then(user => console.log('Connexion réussie', user))
+    .catch(err => console.error('Erreur de connexion', err));
+}
+```
+
+### Erreurs fréquentes
+
+- **Utilisation incorrecte des promesses** : Veillez à bien gérer les erreurs avec <Code>catch()</Code> pour éviter les plantages.
+- **Oublier de sécuriser les routes** : Utilisez les guards pour restreindre l'accès aux pages protégées.
+
+## Sécurisation des routes
+
+```js
+import { AuthGuard } from "./auth.guard";
+
+const routes: Routes = [
+  {
+    path: "dashboard",
+    component: DashboardComponent,
+    canActivate: [AuthGuard],
+  },
+];
+```
+
+---
+
+<div className="flex gap-4 w-full flex-wrap no-underline ">
+  <Tag href="https://firebase.google.com/">Firebase</Tag>
+  <Tag href="https://angular.io/">Angular</Tag>
+  <Tag href="https://git-scm.com/doc">Git</Tag>
+  <Tag href="https://docs.github.com/">GitHub</Tag>
+</div>{" "}

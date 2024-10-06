@@ -1,0 +1,55 @@
+---
+title: "Développement Mobile avec React Native et Expo : Guide Débutant"
+description: "Une introduction au développement mobile avec React Native et Expo, une solution rapide pour déployer des applications sur iOS et Android."
+publishedAt: "2024-09-18"
+cover: "/assets/images/projets/react-native-expo.png"
+freelance: true
+published: true
+---
+
+**React Native** et **Expo** permettent de développer des applications mobiles multiplateformes avec **JavaScript**.
+
+## Configuration du projet
+
+### Initialisation d'un projet Expo
+
+```bash
+npx create-expo-app myApp
+cd myApp
+npm start
+```
+
+### Exemple de composant de base
+
+```js
+import React from "react";
+import { Text, View } from "react-native";
+
+export default function App() {
+  return (
+    <View>
+      <Text>Bienvenue sur mon application React Native !</Text>
+    </View>
+  );
+}
+```
+
+## Erreurs courantes
+
+- **Erreur "SDK version mismatch"** : Mettez à jour Expo avec <Code>expo upgrade</Code> pour synchroniser votre SDK.
+
+- **Utilisation incorrecte des hooks** : Attention à l’utilisation de <Code>useEffect</Code> pour éviter des boucles infinies.
+
+## Conseils pour le développement mobile
+
+- **Utilisez Expo Go** pour tester instantanément votre application sur votre téléphone.
+- **Prévoyez des conditions pour les permissions** (appareil photo, localisation) afin d’améliorer l'expérience utilisateur.
+
+---
+
+<div className="flex gap-4 w-full flex-wrap no-underline ">
+  <Tag href="https://reactnative.dev/">React Native</Tag>
+  <Tag href="https://expo.dev/">Expo</Tag>
+  <Tag href="https://git-scm.com/doc">Git</Tag>
+  <Tag href="https://docs.github.com/">GitHub</Tag>
+</div>
