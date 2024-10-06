@@ -3,25 +3,25 @@ import { getMakdown }  from "@/lib/posts";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export const dynamic = "force-static";
+// export const dynamic = "force-static";
 
-export const generateMetadata = async (props: {
-  params: { slug: string };
-}): Promise<Metadata> => {
-  const post =  await getMakdown(props.params.slug,"/app/content/projets");
+// export const generateMetadata = async (props: {
+//   params: { slug: string };
+// }): Promise<Metadata> => {
+//   const post =  await getMakdown(props.params.slug,"/app/content/projets");
 
-  if (!post) {
-    return {
-      title: "404 - Page Not Found",
-      description: "Page not found",
-    };
-  }
+//   if (!post) {
+//     return {
+//       title: "404 - Page Not Found",
+//       description: "Page not found",
+//     };
+//   }
 
-  return {
-    title: post.title,
-    description: post.description,
-  };
-};
+//   return {
+//     title: post.title,
+//     description: post.description,
+//   };
+// };
 
 export default async function RoutePage(props: { params: { slug: string } }) {
   const post =  await getMakdown(props.params.slug,"/app/content/projets");

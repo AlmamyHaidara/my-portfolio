@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ViewCount } from "./ViewCount";
 
-export const dynamic = "force-static";
+// export const dynamic = "force-static";
 
 export const generateMetadata = async (props: {
   params: { slug: string };
@@ -33,7 +33,9 @@ export default async function RoutePage(props: { params: { slug: string } }) {
 
   return (
     // <div className="prose prose-sm lg:prose-lg text-muted-foreground">
-    <div className="prose prose-sm lg:prose-lg text-muted-foreground">
+    <div className="prose prose-lg lg:prose-2xl text-muted-foreground ">
+
+    {/* <div className="prose prose-lg lg:prose-xl text-muted-foreground"> */}
       <div className="flex items-center gap-2">
         <p className="text-xs text-muted-foreground ">
           {new Date(post.publishedAt).toLocaleDateString()}
