@@ -9,7 +9,7 @@ import { getMakdowns } from "@/lib/posts";
 import Link from "next/link";
 
 export default async function Page() {
-  const posts =  await getMakdowns();
+  const posts =  await getMakdowns("/app/content/posts");
   console.log(posts);
   
   return (

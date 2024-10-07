@@ -4,7 +4,7 @@ import path from "path";
 import { z } from "zod";
 
 const PostSchema = z.object({
-  title: z.string().min(10),
+  title: z.string().min(10).max(65),
   description: z.string(),
   publishedAt: z.coerce.string(),
   cover: z.string().optional().default(""),
@@ -43,19 +43,12 @@ const parsePostFile = async (fileName: string, postsDirectory: string): Promise<
   };
 };
 
-export const getMakdowns = async (dirName:string ): Promise<Post[]> => {
-  
-  // const postsDirectory = path.join(process.cwd(), dirName);
-  const postsDirectory = path.join( process.cwd(),dirName);
-  
-  console.log("uytrtyu",path.join( process.cwd(),dirName));
-  console.log("uytrtyuoooooo",  await fs.readdir(process.cwd()));
-  await fs.access(postsDirectory);
-
+export const getMakdowns = async (dirName = "/app/content/posts"): Promise<Post[]> => {
+  const postsDirectory = path.join(process.cwd(), dirName);
   const files = await fs.readdir(postsDirectory);
   const fileNames = files.filter((f) => f.endsWith(".mdx"));
 
-  const posts = await Promise.all(fileNames.map(async (fileName) => await  parsePostFile(fileName, postsDirectory)));
+  const posts = await Promise.all(fileNames.map(fileName => parsePostFile(fileName, postsDirectory)));
   
   // Filtrer les posts null
   return posts.filter((post): post is Post => post !== null);
