@@ -19,7 +19,7 @@ export default async function TwitterImagePage({
     slug: string;
   };
 }) {
-  const post = (await fetch(`${URL}/api/posts/${params.slug}`).then((res) =>
+  const post = (await fetch(`${URL}/api/projets/${params.slug}`).then((res) =>
     res.json()
   )) as Post;
 

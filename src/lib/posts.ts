@@ -44,15 +44,22 @@ const parsePostFile = async (fileName: string, postsDirectory: string): Promise<
 };
 
 export const getMakdowns = async (dirName = "/app/content/posts"): Promise<Post[]> => {
-  const postsDirectory = path.join(process.cwd(), dirName);
-  const files = await fs.readdir(postsDirectory);
-  const fileNames = files.filter((f) => f.endsWith(".mdx"));
+  try {
+    const postsDirectory = path.join(process.cwd(), dirName);
+    console.log(`Attempting to read from: ${postsDirectory}`); // Debugging log
+    const files = await fs.readdir(postsDirectory);
+    const fileNames = files.filter((f) => f.endsWith(".mdx"));
 
-  const posts = await Promise.all(fileNames.map(fileName => parsePostFile(fileName, postsDirectory)));
-  
-  // Filtrer les posts null
-  return posts.filter((post): post is Post => post !== null);
+    const posts = await Promise.all(fileNames.map(fileName => parsePostFile(fileName, postsDirectory)));
+
+    return posts.filter((post): post is Post => post !== null);
+  } catch (error:any) {
+    console.error(`Error while reading markdowns: ${error.message}`);
+    throw error; // Propager l'erreur après l'avoir loggée
+  }
 };
+
+
 
 export const getMakdown = async (slug: string, dir: string): Promise<Post | undefined> => {
   const posts = await getMakdowns(dir);

@@ -30,9 +30,7 @@ export default async function RoutePage(props: { params: { slug: string } }) {
     notFound();
   }
 
-  return (
-    // <div className="prose prose-sm lg:prose-lg text-muted-foreground ">
-    
+  return (    
     <div className="prose prose-lg lg:prose-2xl text-muted-foreground ">
       
       <div className="text-muted-foreground pt-10">
