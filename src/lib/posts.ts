@@ -28,6 +28,8 @@ const parsePostFile = async (fileName: string, postsDirectory: string): Promise<
     console.error(`Error parsing file: ${fileName}`);
     safeData.error.issues.forEach((issue) => {
       console.error(`  - ${issue.path.join(" -> ")}: ${issue.message}`);
+      console.error(`  - ${issue.path.join(" -> ")}: ${issue.message}`);
+      
     });
     return null; // Retourne null en cas d'erreur
   }
