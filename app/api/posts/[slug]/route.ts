@@ -1,4 +1,4 @@
-import { getMakdown }  from "@/lib/posts";
+import { allPosts } from "contentlayer/generated";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
@@ -8,7 +8,7 @@ export const GET = async (
 ) => {
   const { slug } = props.params;
 
-  const post =  await getMakdown(slug,"/app/content/posts");
+  const post = allPosts.find(r => r.url.replace(/blog\/\d+-/, '') === slug);
 
   return NextResponse.json(post);
 };

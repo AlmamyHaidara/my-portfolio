@@ -1,7 +1,7 @@
-import { Post } from "@/lib/posts";
 import { ImageResponse } from "next/og";
 import { OgImage } from "./OgImage";
 import { getUrl } from "./getUrl";
+import { Projets } from "contentlayer/generated";
 
 const URL = getUrl();
 
@@ -19,11 +19,11 @@ export default async function TwitterImagePage({
     slug: string;
   };
 }) {
-  const post = (await fetch(`${URL}/api/projets/${params.slug}`).then((res) =>
+  const projet = (await fetch(`${URL}/api/projets/${params.slug}`).then((res) =>
     res.json()
-  )) as Post;
+  )) as Projets;
 
-  return new ImageResponse(<OgImage post={post} url={URL} />, {
+  return new ImageResponse(<OgImage projets={projet} url={URL} />, {
     ...size,
   });
 }

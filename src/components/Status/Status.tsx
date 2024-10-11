@@ -1,13 +1,12 @@
 import React from "react";
 import { Card } from "../ui/card";
 import { CONTACTME } from "@/lib/data";
-import { getMakdowns } from "@/lib/posts";
 import Work from "./Work";
 import ContactMe from "./ContactMe";
+import { allProjets } from "contentlayer/generated";
 
 
 async function Status() {
-  const posts = await getMakdowns("/app/content/projets");
 
   return (
     <section className="flex flex-col lg:flex-row items-start gap-6 w-full mt-8">
@@ -15,7 +14,7 @@ async function Status() {
         <Card className="p-4 h-full w-full">
           <h2 className="text-xl font-semibold text-muted-foreground mb-4">Travail</h2>
           <div className="flex flex-col gap-4">
-            {posts.map((post, index) => (
+            {allProjets.map((post, index) => (
               <Work {...post} key={index} />
             ))}
           </div>
