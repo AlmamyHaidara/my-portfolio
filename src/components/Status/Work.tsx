@@ -1,12 +1,10 @@
-import { WorkType } from "@/lib/types";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
-import { Post } from "@/lib/posts";
-import Image from "next/image";
+import {  Projets } from "contentlayer/generated";
 
-function Work(props: Post) {
+function Work(props: Projets) {
   return (
-    <Link href={`/projet/${props.slug}`} className="flex items-center gap-4 p-1 rounded-lg hover:bg-primary/10 transition-colors">
+    <Link href={`${props.url.replace(/\d+-/g, "").replace(".mdx", "")}`} className="flex items-center gap-4 p-1 rounded-lg hover:bg-primary/10 transition-colors">
       <img
         src={props.cover || "/default-cover.jpg"}
         alt={props.title}

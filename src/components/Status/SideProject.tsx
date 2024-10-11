@@ -1,21 +1,19 @@
 import React from "react";
 import Link from "next/link";
-import { SideProjectType } from "@/lib/types"; // Assurez-vous que le chemin est correct
-import { Post } from "@/lib/posts";
-import Image from "next/image";
+import { Projets } from "contentlayer/generated";
 
-function SideProject(props: Post) {
+function SideProject(props: Projets) {
   return (
     <Link
-      href={`/projet/${props.slug}`}
-      className="inline-flex items-center gap-4 hover:bg-primary/10 rounded-sm transition-colors p-1"
+    href={`${props.url.replace(/\d+-/g, "").replace(".mdx", "")}`}
+    className="inline-flex items-center gap-4 rounded-sm p-1 transition-colors hover:bg-primary/10"
     >
-      <span className="w-[15%] h-20  text-accent-foreground p-3 rounded-full">
+      <span className="h-20 w-[15%]  rounded-full p-3 text-accent-foreground">
         {/* <props.logo /> */}
         <img
         src={props.cover || "/default-cover.jpg"}
         alt={props.title}
-        className="w-full h-full object-cover rounded-md"
+        className="size-full rounded-md object-cover"
       />
       </span>
       <div>

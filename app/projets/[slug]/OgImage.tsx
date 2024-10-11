@@ -1,13 +1,13 @@
 /* eslint-disable react/no-unknown-property */
-import { Post } from "@/lib/posts";
-import Image from "next/image";
+
+import { Projets } from "contentlayer/generated";
 
 export type OgImageProps = {
-  post: Post;
+  projets: Projets;
   url: string;
 };
 
-export const OgImage = ({ post, url }: OgImageProps) => {
+export const OgImage = ({ projets, url }: OgImageProps) => {
   return (
     <div className="w-full h-full flex flex-col relative gap-4 text-white bg-[#090910] opacity-100">
       <img
@@ -20,9 +20,9 @@ export const OgImage = ({ post, url }: OgImageProps) => {
           CodeCraft
         </p>
         <p className="text-xl m-0 mt-3">
-          {new Date(post.publishedAt).toLocaleDateString()}
+          {new Date(projets.publishedAt).toLocaleDateString()}
         </p>
-        <p className="text-6xl m-0 mt-0">{post.title}</p>
+        <p className="text-6xl m-0 mt-0">{projets.title}</p>
         <div className="flex items-center gap-2 mt-auto">
           <img
             alt="x"

@@ -5,17 +5,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getMakdowns } from "@/lib/posts";
 import Link from "next/link";
+import { allPosts } from 'contentlayer/generated';
+
 
 export default async function Page() {
-  const posts =  await getMakdowns("/app/content/posts");
-  console.log(posts);
-  
+
   return (
-    <div className=" w-full h-full flex justify-start mt-16 flex-col gap-5 ">
-      {posts.reverse().map((post) => (
-        <Card key={post.slug}>
+    <div className=" mt-16 flex size-full flex-col justify-start gap-5 ">
+      {allPosts.reverse().map((post) => (
+        <Card key={post.url.replace(/\d+-/g, "").replace(".mdx", "")}>
           <CardHeader>
             <p className="text-xs text-muted-foreground">
               {new Date(post.publishedAt).toLocaleDateString()}
@@ -26,7 +25,7 @@ export default async function Page() {
           <CardFooter>
             <Link
               className="text-blue-500 hover:underline"
-              href={`/posts/${post.slug}`}
+              href={`${post.url.replace(/\d+-/g, "").replace(".mdx", "")}`}
             >
               Découvrir
             </Link>

@@ -1,15 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Mdx } from "@/features/mdx/Mdx";
-import { getMakdown }  from "@/lib/posts";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ViewCount } from "./ViewCount";
+import { allPosts } from "contentlayer/generated";
 
 export const dynamic = "force-static";
 
 export const generateMetadata = async (props: {
   params: { slug: string };
 }): Promise<Metadata> => {
-  const post =  await getMakdown(props.params.slug,"/app/content/posts");
+  const post = allPosts.find(r => r.url.replace(/blog\/\d+-/, '') === props.params.slug);
 
   if (!post) {
     return {
@@ -25,15 +26,15 @@ export const generateMetadata = async (props: {
 };
 
 export default async function RoutePage(props: { params: { slug: string } }) {
-  const post:any =  await getMakdown(props.params.slug,"/app/content/posts");
-
+  const post = allPosts.find(r => r.url.replace(/blog\/\d+-/, '') === props.params.slug);
+  console.log('allPosts:', post);
   if (!post) {
     notFound();
   }
 
   return (
     // <div className="prose prose-sm lg:prose-lg text-muted-foreground">
-    <div className="prose prose-lg lg:prose-2xl text-muted-foreground ">
+    <div className="prose prose-lg text-muted-foreground lg:prose-2xl ">
 
     {/* <div className="prose prose-lg lg:prose-xl text-muted-foreground"> */}
       <div className="flex items-center gap-2">
@@ -42,11 +43,11 @@ export default async function RoutePage(props: { params: { slug: string } }) {
         </p>
         <ViewCount slug={props.params.slug} />
       </div>
-      <div className="text-muted-foreground w-full">
-        <h1 className="text-muted-foreground ">{post.title}</h1>
+      <div className="w-full text-muted-foreground">
+        <h1 className="text-muted-foreground ">{post?.title}</h1>
         <div className="!text-muted-foreground">
 
-        <Mdx>{post.content}</Mdx>
+        <Mdx>{post?.body.raw}</Mdx>
         </div>
       </div>
     </div>
