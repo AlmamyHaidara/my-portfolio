@@ -1,0 +1,49 @@
+---
+title: Automatisation des Pipelines sur Azure
+description: "Ce projet consiste en l'automatisation des tâches liées à la gestion des dumps de bases de données sur Azure. Il inclut la récupération des dumps en fin de semaine, leur stockage sécurisé sur un FileShare et leur exécution sur différents environnements en début de semaine, tout en sécurisant les informations sensibles via un Key Vault sur Azure. Le projet a été réalisé avec Azure Pipelines et Python."
+publishedAt: "2025-01-31"
+cover: "/assets/images/projets/automation.png"
+freelance: false
+published: true
+---
+
+## Présentation du projet
+
+Ce projet vise à automatiser la gestion des **dumps de bases de données** sur **Azure** en orchestrant plusieurs tâches essentielles à l'aide de **Azure Pipelines** et **Python**.
+
+L'objectif principal est d'assurer une **gestion optimisée et sécurisée** des bases de données sur différents environnements grâce à une exécution programmée des opérations.
+
+## Fonctionnalités principales
+
+- **Récupération automatique des dumps** : Chaque fin de semaine, les dumps des bases de données sont extraits et stockés sur un **Azure FileShare**.
+- **Exécution des dumps sur différents environnements** : Chaque début de semaine, les dumps de la semaine précédente sont restaurés sur des **environnements distincts**.
+- **Sécurisation des informations sensibles** : Les **secrets et credentials** liés aux environnements sont stockés et récupérés dynamiquement depuis un **Azure Key Vault**.
+- **Automatisation complète via Azure Pipelines** : L'ensemble du processus est **orchestré par des pipelines** afin d'éviter toute intervention manuelle et garantir une exécution fiable.
+
+## Technologies utilisées
+
+- <a href="https://azure.microsoft.com/en-us/products/devops/pipelines/" className="no-underline hover:text-primary font-semibold">Azure Pipelines :</a> Outil de CI/CD utilisé pour l'orchestration des tâches d'automatisation.
+- <a href="https://www.python.org/" className="no-underline hover:text-primary font-semibold">Python :</a> Langage de programmation utilisé pour automatiser les scripts de récupération et d’exécution des dumps.
+- <a href="https://azure.microsoft.com/en-us/products/storage/files/" className="no-underline hover:text-primary font-semibold">Azure FileShare :</a> Service de stockage utilisé pour conserver les dumps avant leur traitement.
+- <a href="https://azure.microsoft.com/en-us/products/key-vault/" className="no-underline hover:text-primary font-semibold">Azure Key Vault :</a> Gestionnaire de secrets utilisé pour stocker les credentials et autres informations sensibles.
+- <a href="https://git-scm.com/doc" className="no-underline hover:text-primary font-semibold">Git :</a> Outil de gestion de version pour suivre l'évolution des scripts d'automatisation.
+- <a href="https://azure.microsoft.com/en-us/products/devops/" className="no-underline hover:text-primary font-semibold">Azure DevOps :</a> Plateforme de gestion du cycle de développement, utilisée pour le versionnement et la gestion des pipelines.
+
+## Objectif du projet
+
+L'automatisation de la gestion des bases de données sur **Azure** permet :
+- De **réduire les interventions manuelles** et d'éviter les erreurs humaines.
+- D’**optimiser la gestion des environnements** en assurant la disponibilité des données restaurées chaque semaine.
+- D’**améliorer la sécurité** en gérant les accès et credentials via **Azure Key Vault**.
+
+---
+<div className="flex gap-4 w-full flex-wrap no-underline">
+    <Tag href="https://azure.microsoft.com/en-us/products/devops/pipelines/">Azure Pipelines</Tag>
+    <Tag href="https://www.python.org/">Python</Tag>
+    <Tag href="https://azure.microsoft.com/en-us/products/storage/files/">Azure FileShare</Tag>
+    <Tag href="https://azure.microsoft.com/en-us/products/key-vault/">Azure Key Vault</Tag>
+    <Tag href="https://git-scm.com/doc">Git</Tag>
+    <Tag href="https://docs.github.com/">GitHub</Tag>
+    <Tag href="https://azure.microsoft.com/en-us/products/devops/">Azure DevOps</Tag>
+
+</div>

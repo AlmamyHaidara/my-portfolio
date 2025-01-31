@@ -16,12 +16,13 @@ function Page() {
           non seulement le développement web avec des technologies telles que{" "}
           <span className="font-semibold">TypeScript</span>,{" "}
           <span className="font-semibold">Next.js</span>,{" "}
+          <span className="font-semibold">Nest.js</span>,{" "}
           <span className="font-semibold">Tailwind CSS</span>,{" "}
           <span className="font-semibold">PostgreSQL</span>, et{" "}
           <span className="font-semibold">Vercel</span>, mais également le
           développement mobile avec{" "}
-          <span className="font-semibold">React Native</span> et{" "}
-          <span className="font-semibold">Expo</span>.
+          <span className="font-semibold">React Native</span> et {" "}
+          <span className="font-semibold">Expo</span>; l'automatisation des taches avec <span className="font-semibold">Python</span> et <span className="font-semibold">azure pipeline</span>.
         </p>
 
         {/* Section Parcours Professionnel */}
@@ -33,7 +34,7 @@ function Page() {
           quelques-unes des étapes marquantes de mon parcours :
         </p>
         <ul className="list-disc list-inside mb-6 text-lg">
-          <li>
+          <li className="mb-3">
             <span className="font-semibold">Samina</span> : Actuellement, je
             travaille chez Samina, une entreprise informatique de premier plan,
             offrant une gamme complète de services tels que le développement de
@@ -48,8 +49,9 @@ function Page() {
             <span className="font-semibold">ASP.NET</span>,{" "}
             <span className="font-semibold">MySQL</span> et{" "}
             <span className="font-semibold">Azure</span>.
+            <br/>
           </li>
-          <li>
+          <li className="mb-3">
             <span className="font-semibold">MKParis Concept</span> :
             Développement backend et front-end d'une application mobile en{" "}
             <span className="font-semibold">React Native</span> et{" "}
@@ -91,6 +93,7 @@ function Page() {
             Formations en développement Full-Stack :{" "}
             <span className="font-semibold">React</span>,{" "}
             <span className="font-semibold">Node.js</span>,{" "}
+            <span className="font-semibold">Nest.js</span>,{" "}
             <span className="font-semibold">Angular</span>, et intégration avec
             des bases de données telles que{" "}
             <span className="font-semibold">PostgreSQL</span> et{" "}
@@ -109,7 +112,7 @@ function Page() {
           des conteneurs via <span className="font-semibold">Docker</span>.
           Cette combinaison de compétences me permet de gérer l’intégralité du
           cycle de vie d’un projet, du concept initial au déploiement, aussi
-          bien sur des environnements web que mobiles.
+          bien sur des environnements web que mobiles et l'automatisation des tache avec Python et Azure pipelines .
         </p>
 
         {/* Conclusion */}

@@ -10,12 +10,17 @@ import {
 import Link from "next/link";
 import Spacing from "../src/components/Spacing";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 
 // Importations dynamiques
-const Status = dynamic(() => import('@/components/Status/Status'));
-const Realisation = dynamic(() => import('@/components/Realisation'));
+const Status = dynamic(() => import('@/components/Status/Status'), {
+  ssr: false,
+  loading: () => <p>Chargement en cours...</p>,
+});
+const Realisation = dynamic(() => import('@/components/Realisation'), {
+  ssr: false,
+  loading: () => <p>Chargement en cours...</p>,
+});
 
 const styleClass = {
   badge:
@@ -108,6 +113,7 @@ export default function Home() {
             expérience utilisateur optimale, en utilisant des technologies de
             pointe telles que <span className="font-semibold">TypeScript</span>,{" "}
             <span className="font-semibold">Next.js</span>,{" "}
+            <span className="font-semibold">Nestjs</span>,{" "}
             <span className="font-semibold">Tailwind CSS</span>,{" "}
             <span className="font-semibold">PostgreSQL</span>, et{" "}
             <span className="font-semibold">Vercel</span>. Mon expertise dans
@@ -131,6 +137,7 @@ export default function Home() {
             telles que
             <span className="font-semibold">TypeScript</span>,{" "}
             <span className="font-semibold">Next.js</span>,{" "}
+            <span className="font-semibold">Nest.js</span>,{" "}
             <span className="font-semibold">Tailwind CSS</span>,
             <span className="font-semibold">PostgreSQL</span>, et{" "}
             <span className="font-semibold">Vercel</span>,mais également le
@@ -144,7 +151,7 @@ export default function Home() {
             <span className="font-semibold">Infrastructure as Code (IaC)</span>,
             avec <span className="font-semibold">Terraform</span>, la création
             de pipelines CI/CD avec{" "}
-            <span className="font-semibold">Azure Pipelines</span>, et la
+            <span className="font-semibold">Azure Pipelines</span>, azure pipeline et la
             gestion des conteneurs via Docker. Cette combinaison de compétences
             me permet de gérer l’intégralité du cycle de vie d’un projet, du
             concept initial au déploiement, aussi bien sur des environnements

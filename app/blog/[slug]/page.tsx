@@ -26,8 +26,8 @@ export const generateMetadata = async (props: {
 };
 
 export default async function RoutePage(props: { params: { slug: string } }) {
+  console.log('allPosts:', props.params.slug);
   const post = allPosts.find(r => r.url.replace(/blog\/\d+-/, '') === props.params.slug);
-  console.log('allPosts:', post);
   if (!post) {
     notFound();
   }

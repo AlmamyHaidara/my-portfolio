@@ -3,7 +3,6 @@ import { Card } from "./ui/card";
 import { ProjectTye } from "@/lib/types";
 import { RealisationData } from "@/lib/data";
 import Link from "next/link";
-import Image from "next/image";
 
 function Realisation() {
   return (

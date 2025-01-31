@@ -84,6 +84,13 @@ export const RealisationData = [
     path:"https://nextjs.org"
   },
   {
+    image: "/assets/images/Nest.js.svg",
+    name: "Next.js",
+    mediumImage: "/assets/images/Nest.js.svg",
+    description: `Je suis un expert en Nest.js, un framework basé sur Nodejs, et je peux créer des applications web performantes, robuste et sécurisé.`,
+    path:"https://docs.nestjs.com/"
+  },
+  {
     image: "/assets/images/tailwind.svg",
     name: "Tailwind CSS",
     mediumImage: "/assets/images/tailwind.svg",
