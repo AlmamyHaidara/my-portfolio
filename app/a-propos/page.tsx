@@ -1,8 +1,17 @@
+"use client"
 import React from "react";
+import {motion} from "motion/react";
 
 function Page() {
   return (
-    <div className="flex justify-start w-full items-start mt-10">
+      <motion.div
+          // L’état initial au chargement
+          initial={{ opacity: 0, y: -50 }}
+          // L’état final (après l’animation)
+          animate={{ opacity: 1, y: 0 }}
+          // La durée et autres paramètres de transition
+          transition={{ duration: 0.8 }}
+          className="flex justify-start w-full items-start mt-10">
       <div className="w-full mx-auto py-6">
         {/* Titre principal */}
         <h1 className="text-4xl font-bold mb-6">À propos de moi</h1>
@@ -125,7 +134,7 @@ function Page() {
           entreprises avec lesquelles je collabore.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

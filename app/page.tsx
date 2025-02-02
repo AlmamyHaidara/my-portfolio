@@ -1,3 +1,4 @@
+"use client"
 import { cn } from "@/lib/utils";
 import {
   ArrowBigDown,
@@ -11,6 +12,7 @@ import Link from "next/link";
 import Spacing from "../src/components/Spacing";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
+import { motion } from "motion/react";
 
 // Importations dynamiques
 const Status = dynamic(() => import('@/components/Status/Status'), {
@@ -27,8 +29,17 @@ const styleClass = {
     "relative rounded bg-primary/10 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold inline-flex items-center gap-2 hover:bg-primary/20 transition-colors hover:underline text-primary",
 };
 export default function Home() {
+
+
   return (
-    <div className=" w-full h-full flex justify-start mt-16 flex-col ">
+    <motion.div
+        // L’état initial au chargement
+        initial={{ opacity: 0, y: -50 }}
+        // L’état final (après l’animation)
+        animate={{ opacity: 1, y: 0 }}
+        // La durée et autres paramètres de transition
+        transition={{ duration: 0.8 }}
+        className=" w-full h-full flex justify-start mt-16 flex-col ">
       <section className=" w-full h-96 flex justify-center flex-col my-5 items-start">
         <div className="flex justify-start mt-5 items-center">
           <div className="rounded-full  mr-5">
@@ -164,6 +175,6 @@ export default function Home() {
         </div>
         {/* <Status /> */}
       </section>
-    </div>
+    </motion.div>
   );
 }
