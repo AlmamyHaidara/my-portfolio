@@ -171,6 +171,8 @@ export const toolsData: ToolsData[] = [
       { techno: "Vercel", link: "https://vercel.com/" },
       { techno: "Netlify", link: "https://www.netlify.com/" },
       { techno: "Heroku", link: "https://www.heroku.com/" },
+      { techno: "Render", link: "https://www.heroku.com/" },
+      { techno: "Azure portal", link: "https://www.heroku.com/" },
     ],
   },
 ];
