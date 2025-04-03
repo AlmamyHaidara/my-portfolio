@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "./ui/card";
-import { ProjectTye } from "@/lib/types";
+import { ProjectTye } from "@/types";
 import { RealisationData } from "@/lib/data";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -75,7 +75,7 @@ function Project(props: ProjectTye & { index: number }) {
       custom={props.index}
     >
       <Link 
-        href={props.path} 
+        href={props.path as string} 
         target="_blank"
         aria-label={`Voir le projet ${props.name}: ${props.description}`}
       >

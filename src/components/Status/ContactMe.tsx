@@ -1,8 +1,11 @@
-import { ContactMeType } from "@/lib/types";
+import { ContactMeType } from "@/types";
 import { Card } from "../ui/card";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { CONTACTME } from "@/lib/data";
+import React from "react";
+import { cn } from "@/utils";
 
 function ContactMe(props: ContactMeType) {
   return (

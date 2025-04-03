@@ -1,10 +1,12 @@
 // pages/contact.js
 
-import { toolsData } from "@/lib/data";
-import { ToolsData } from "@/lib/types";
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
+import { ToolsData } from "@/types";
+import { toolsData } from "@/lib/data";
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode, Key } from "react";
+import Image from "next/image";
+import { cn } from "@/utils";
 
 export default function Outils() {
   return (

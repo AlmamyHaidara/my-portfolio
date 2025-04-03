@@ -1,5 +1,5 @@
 "use client"
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 import {
   ArrowBigDown,
   ArrowBigRight,
@@ -33,9 +33,9 @@ export default function Home() {
 
   return (
     <motion.div
-        // L’état initial au chargement
+        // L'état initial au chargement
         initial={{ opacity: 0, y: -50 }}
-        // L’état final (après l’animation)
+        // L'état final (après l'animation)
         animate={{ opacity: 1, y: 0 }}
         // La durée et autres paramètres de transition
         transition={{ duration: 0.8 }}
@@ -76,7 +76,7 @@ export default function Home() {
               <Infinity size={16} /> DevOps
             </Link>
             , passionné par la création d'applications performantes et
-            sécurisées. J’aime partager mes connaissances à travers mes projets
+            sécurisées. J'aime partager mes connaissances à travers mes projets
             et mes réseaux comme{" "}
             <Link href={"https://github.com/AlmamyHaidara"} target="_blank" className={cn(`${styleClass.badge}`)}>
               <Github size={16} /> GitHub
@@ -158,13 +158,13 @@ export default function Home() {
           </p>
 
           <p className="text-lg pb-2 text-muted-foreground">
-            En tant que professionnel DevOps, je maîtrise des outils tels que l’
+            En tant que professionnel DevOps, je maîtrise des outils tels que l'
             <span className="font-semibold">Infrastructure as Code (IaC)</span>,
             avec <span className="font-semibold">Terraform</span>, la création
             de pipelines CI/CD avec{" "}
             <span className="font-semibold">Azure Pipelines</span>, azure pipeline et la
             gestion des conteneurs via Docker. Cette combinaison de compétences
-            me permet de gérer l’intégralité du cycle de vie d’un projet, du
+            me permet de gérer l'intégralité du cycle de vie d'un projet, du
             concept initial au déploiement, aussi bien sur des environnements
             web que mobiles...{" "}
           </p>

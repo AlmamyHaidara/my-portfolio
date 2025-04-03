@@ -1,6 +1,6 @@
 "use client";
 import { NetWorkData } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";

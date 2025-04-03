@@ -1,5 +1,5 @@
 import { Car, Code } from "lucide-react";
-import { ContactMeType, SideProjectType, ToolsData, WorkType } from "./types";
+import { ContactMeType, NetworkType, SideProjectType, ToolsData, WorkType } from "@/types";
 
 export const WORKS: WorkType[] = [
   {
