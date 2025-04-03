@@ -12,7 +12,7 @@ import Link from "next/link";
 import Spacing from "../src/components/Spacing";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 // Importations dynamiques
 const Status = dynamic(() => import('@/components/Status/Status'), {

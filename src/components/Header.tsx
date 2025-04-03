@@ -1,11 +1,11 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { AlignRight, X } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { ModeToggle } from "./ModeToggle";
+import { motion } from "framer-motion";
 
 const navigation = [
   {
@@ -33,6 +33,7 @@ const navigation = [
     title: "Blog",
   },
 ];
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,20 +46,45 @@ function Header() {
 
   const isMenuOpen = () => {
     setIsOpen((prev) => !prev);
-    console.log("oi", isOpen);
   };
+
+  // Animation variants
+  const navVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
-    <header className="flex items-center gap-2 px-16 ">
+    <motion.header 
+      className="flex items-center gap-2 px-16"
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <Link
         href="/"
         className="rounded-full flex md:w-[4%] max-md:w-full justify-between items-center"
+        aria-label="Accueil - CodeCraft"
       >
-        <img
+        <motion.img
           src={"/assets/images/logo1.png"}
-          alt="alt"
+          alt="Logo CodeCraft"
           width={50}
           height={20}
           className="rounded-full"
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
         />
         <p className="font-extrabold text-3xl sm:text-xl max-lg:hidden ">
           Code<span className=" text-primary">Craft</span>
@@ -66,10 +92,13 @@ function Header() {
       </Link>
 
       <div className="ml-auto "> </div>
-      <div className="  flex justify-between">
-        <div
+      <div className="flex justify-between">
+        <button
           className="absolute right-5 top-10 z-50 max-md:block md:hidden cursor-pointer"
           onClick={isMenuOpen}
+          aria-expanded={isOpen}
+          aria-label="Menu principal"
+          aria-controls="main-navigation"
         >
           {isOpen ? (
             <X
@@ -86,37 +115,42 @@ function Header() {
               )}
             />
           )}
-        </div>
+        </button>
 
-        <div
-          className={`flex justify-between gap-5  max-md:bg-[#11151d] max-md:absolute max-md:left-0 max-md:top-0 max-md:right-0 max-md:py-20 max-md:bg-muted max-md:z-40 max-md:flex-col transform transition-all duration-500 ease-in-out ${
+        <motion.nav
+          id="main-navigation"
+          className={`flex justify-between gap-5 max-md:bg-[#11151d] max-md:absolute max-md:left-0 max-md:top-0 max-md:right-0 max-md:py-20 max-md:bg-muted max-md:z-40 max-md:flex-col transform transition-all duration-500 ease-in-out ${
             isOpen
               ? "max-md:max-w-full max-md:translate-x-0 max-md:opacity-100 max-md:visible"
               : "max-md:max-w-0 max-md:translate-x-full max-md:opacity-0 max-md:invisible"
           }`}
+          variants={navVariants}
+          initial="hidden"
+          animate="visible"
+          role="navigation"
+          aria-label="Navigation principale"
         >
           {navigation.map((nav, index) => (
-            <Link
-              href={nav.path}
-              key={index}
-              className={cn(
-                `${"text-primary border-primary transition-colors duration-500 p-2 max-md:hover:bg-primary/20 max-md:hover:transition-colors max-md:hover:duration-500 flex max-md:justify-start max-md:pl-10 "}  ${isActivate(
-                  nav.path
-                )}`
-              )}
-            >
-              {nav.title}
-            </Link>
+            <motion.div key={index} variants={itemVariants}>
+              <Link
+                href={nav.path}
+                className={cn(
+                  `${"text-primary border-primary transition-colors duration-500 p-2 max-md:hover:bg-primary/20 max-md:hover:transition-colors max-md:hover:duration-500 flex max-md:justify-start max-md:pl-10 "}  ${isActivate(
+                    nav.path
+                  )}`
+                )}
+                aria-current={currentPath === nav.path ? "page" : undefined}
+              >
+                {nav.title}
+              </Link>
+            </motion.div>
           ))}
           <div className=" max-md:pl-10 max-md:w-full ">
             <ModeToggle />
           </div>
-        </div>
-        {/* <Link href="/" className='text-primary'>Acceuil</Link>
-    <Link href="/blog"  className={cn(`${'text-primary border-b-2  border-blue-700'} ${({ isActive }:{isActive:boolean}) => (isActive ? "bg-red-500" : "")} `)}>Blog</Link>
-    <Link href="#" className='text-primary' >Contact</Link> */}
+        </motion.nav>
       </div>
-    </header>
+    </motion.header>
   );
 }
 
