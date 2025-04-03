@@ -1,6 +1,6 @@
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { defineDocumentType, makeSource } from 'contentlayer2/source-files';
+import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 
 const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -12,6 +12,7 @@ const Post = defineDocumentType(() => ({
     cover: { type: 'string', required: true },
     freelance: { type: 'boolean', required: true },
     published: { type: 'boolean', required: true },
+    tags: { type: 'list', of: { type: 'string' }, required: false },
   },
   computedFields: {
     url: {
@@ -31,6 +32,7 @@ const Projets = defineDocumentType(() => ({
       cover: { type: 'string', required: true },
       freelance: { type: 'boolean', required: true },
       published: { type: 'boolean', required: true },
+      tags: { type: 'list', of: { type: 'string' }, required: false },
     },
     computedFields: {
       url: {

@@ -2,13 +2,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
 function Page() {
   return (
       <motion.div
-          // L’état initial au chargement
+          // L'état initial au chargement
           initial={{ opacity: 0, y: -50 }}
-          // L’état final (après l’animation)
+          // L'état final (après l'animation)
           animate={{ opacity: 1, y: 0 }}
           // La durée et autres paramètres de transition
           transition={{ duration: 0.8 }}
@@ -114,14 +113,14 @@ function Page() {
         {/* Section Expertise DevOps */}
         <h2 className="text-2xl font-bold mb-4">Expertise DevOps</h2>
         <p className="text-lg pb-4">
-          En tant que professionnel DevOps, je maîtrise des outils tels que l’{" "}
+          En tant que professionnel DevOps, je maîtrise des outils tels que l'{" "}
           <span className="font-semibold">Infrastructure as Code (IaC)</span>{" "}
           avec <span className="font-semibold">Terraform</span>, la création de
           pipelines CI/CD avec{" "}
           <span className="font-semibold">Azure Pipelines</span>, et la gestion
           des conteneurs via <span className="font-semibold">Docker</span>.
-          Cette combinaison de compétences me permet de gérer l’intégralité du
-          cycle de vie d’un projet, du concept initial au déploiement, aussi
+          Cette combinaison de compétences me permet de gérer l'intégralité du
+          cycle de vie d'un projet, du concept initial au déploiement, aussi
           bien sur des environnements web que mobiles et l'automatisation des tache avec Python et Azure pipelines .
         </p>
 

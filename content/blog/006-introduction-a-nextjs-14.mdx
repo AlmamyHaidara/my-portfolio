@@ -1,0 +1,64 @@
+---
+title: "Introduction à Next.js 14"
+description: "Découvrez les nouvelles fonctionnalités et améliorations de Next.js 14."
+publishedAt: "2023-12-15"
+cover: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+freelance: false
+published: true
+tags: ["Next.js", "React", "Web Development", "Frontend"]
+---
+
+# Introduction à Next.js 14
+
+Next.js 14 est sorti et apporte plusieurs améliorations majeures par rapport aux versions précédentes. Dans cet article, nous allons explorer les nouvelles fonctionnalités de cette version et comment elles peuvent améliorer vos applications web.
+
+## L'App Router
+
+L'une des plus grandes nouveautés de Next.js 14 est la stabilisation de l'App Router, qui offre:
+
+- Un routage basé sur le système de fichiers
+- Des layouts partagés
+- Le chargement des états
+- Le streaming côté serveur
+- Support des actions serveur
+
+```jsx
+// app/layout.js
+export default function RootLayout({ children }) {
+  return (
+    <html lang="fr">
+      <body>{children}</body>
+    </html>
+  )
+}
+```
+
+## Turbopack (Beta)
+
+Next.js 14 introduit Turbopack, un successeur de Webpack écrit en Rust qui promet:
+
+- Des démarrages 700x plus rapides que Webpack
+- Des mises à jour 10x plus rapides que Webpack
+- Une compilation plus intelligente
+
+## Server Components
+
+Les composants serveur sont maintenant la norme dans Next.js 14:
+
+```jsx
+// Ce composant s'exécute uniquement sur le serveur
+export default async function Dashboard() {
+  const data = await fetchData() // Accès direct à la base de données
+  
+  return (
+    <main>
+      <h1>Tableau de bord</h1>
+      <p>Données: {data}</p>
+    </main>
+  )
+}
+```
+
+## Conclusion
+
+Next.js 14 représente une avancée majeure pour le framework, avec des améliorations significatives en termes de performance, d'expérience développeur et de nouvelles fonctionnalités. Si vous n'avez pas encore essayé cette version, c'est le moment idéal pour le faire! 

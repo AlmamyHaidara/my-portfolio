@@ -2,6 +2,7 @@
 import { cn } from "@/utils";
 import { AlignRight, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { ModeToggle } from "./ModeToggle";
@@ -77,15 +78,19 @@ function Header() {
         className="rounded-full flex md:w-[4%] max-md:w-full justify-between items-center"
         aria-label="Accueil - CodeCraft"
       >
-        <motion.img
-          src={"/assets/images/logo1.png"}
-          alt="Logo CodeCraft"
-          width={50}
-          height={20}
-          className="rounded-full"
+        <motion.div
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}
-        />
+        >
+          <Image
+            src="/assets/images/logo1.png"
+            alt="Logo CodeCraft"
+            width={50}
+            height={50}
+            className="rounded-full"
+            priority
+          />
+        </motion.div>
         <p className="font-extrabold text-3xl sm:text-xl max-lg:hidden ">
           Code<span className=" text-primary">Craft</span>
         </p>

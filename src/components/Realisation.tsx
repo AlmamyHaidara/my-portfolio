@@ -3,6 +3,7 @@ import { Card } from "./ui/card";
 import { ProjectTye } from "@/types";
 import { RealisationData } from "@/lib/data";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -81,24 +82,29 @@ function Project(props: ProjectTye & { index: number }) {
       >
         <Card className="p-3 bg-accent/10 hover:bg-primary/10 transition-colors group flex flex-col items-center gap-4">
           <motion.div 
-            className="relative w-full flex flex-col items-center justify-center"
+            className="relative w-full flex flex-col items-center justify-center h-20"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <img
+            <Image
               src={props.image}
               alt={`Image du projet ${props.name}`}
-              className="w-full h-20 object-contain"
+              className="object-contain"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </motion.div>
           <div className="mr-auto">
             <div className="flex flex-col">
-              <img
-                src={props.mediumImage}
-                alt={`Logo de ${props.name}`}
-                className="w-6 h-6 object-contain"
-              />
-
+              <div className="relative w-6 h-6">
+                <Image
+                  src={props.mediumImage}
+                  alt={`Logo de ${props.name}`}
+                  fill
+                  className="object-contain"
+                  sizes="24px"
+                />
+              </div>
               <p className="text-lg font-semibold mr-5">{props.name}</p>
             </div>
             <p className="text-xs text-muted-foreground">{props.description}</p>

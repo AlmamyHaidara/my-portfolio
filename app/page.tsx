@@ -1,4 +1,5 @@
 "use client"
+
 import { cn } from "@/utils";
 import {
   ArrowBigDown,
@@ -9,6 +10,7 @@ import {
   Linkedin,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Spacing from "../src/components/Spacing";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
@@ -43,11 +45,14 @@ export default function Home() {
       <section className=" w-full h-96 flex justify-center flex-col my-5 items-start">
         <div className="flex justify-start mt-5 items-center">
           <div className="rounded-full  mr-5">
-            <img
-              src={"/assets/images/logo1.png"}
-              className="rounded-[100%] object-cover w-[100px] h-[100px]"
-              alt="alt"
-             
+            <Image
+              src="/assets/images/logo1.png"
+              className="rounded-[100%] object-cover"
+              alt="Photo de profil d'Almamy Ali Haïdara"
+              width={100}
+              height={100}
+              priority
+              quality={90}
             />
           </div>
 

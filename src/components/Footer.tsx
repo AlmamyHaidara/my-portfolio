@@ -2,6 +2,7 @@
 import { NetWorkData } from "@/lib/data";
 import { cn } from "@/utils";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { motion } from "framer-motion";
@@ -74,11 +75,15 @@ function Footer() {
               aria-label={`Visiter mon profil ${item.alt}`}
               title={`Visiter mon profil ${item.alt}`}
             >
-              <img
-                src={item.img}
-                alt={item.alt}
-                className="w-full h-10 hover:h-12 transform duration-500 object-contain"
-              />
+              <div className="relative w-10 h-10">
+                <Image
+                  src={item.img}
+                  alt={item.alt}
+                  fill
+                  className="object-contain hover:h-12 transform duration-500"
+                  sizes="40px"
+                />
+              </div>
             </Link>
           </motion.span>
         ))
