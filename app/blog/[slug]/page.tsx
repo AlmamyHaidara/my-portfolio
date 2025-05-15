@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/blog'; // À implémenter
+import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/blog';
 import { formatDate } from '@/utils';
 import { ViewCount } from './ViewCount';
+import { Mdx } from '@/features/mdx/Mdx';
 
 // Méthode pour générer les pages statiquement
 export async function generateStaticParams() {
-  // Cette fonction sera appelée à la construction pour générer toutes les pages
   const posts = await getAllBlogPosts();
   
   return posts.map((post) => ({
@@ -80,8 +80,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       )}
       
       <div className="prose prose-lg max-w-none">
-        {/* Le contenu sera rendu ici, idéalement avec MDX */}
-        {post.content}
+        <Mdx>{post.content}</Mdx>
       </div>
       
       {post.tags && post.tags.length > 0 && (
