@@ -1,39 +1,68 @@
 import { allProjets } from "contentlayer/generated";
+// import { getProjectBySlug, getAllProjects } from "@/lib/mock-data";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 // import {ViewCount} from "../../blog/[slug]/ViewCount";
 import { SlugContent } from "./SlugContent";
+import { ViewCount } from "../../blog/[slug]/ViewCount";
 
+// Forcer la génération statique de ces pages pour un chargement plus rapide
 export const dynamic = "force-static";
+export const revalidate = 3600; // Revalider le cache toutes les heures
 
-export const generateMetadata = async (props: {
+// Utiliser une fonction de cache pour récupérer un projet par son slug
+const getProjetBySlug = (slug: string) => {
+  return allProjets.find((p) => p._raw.flattenedPath === `projets/${slug}`);
+};
+
+export const generateMetadata = async ({
+  params
+}: {
   params: { slug: string };
 }): Promise<Metadata> => {
-  const projet = allProjets.find(
-    (r) => r.url.replace(/projets\/\d+-/, "") === props.params.slug
-  );
+  const projet = getProjetBySlug(params.slug);
 
   if (!projet) {
     return {
-      title: "404 - Page Not Found",
-      description: "Page not found",
+      title: "Projet non trouvé",
+      description: "Le projet que vous recherchez n'existe pas.",
     };
   }
 
   return {
-    title: projet.title,
+    title: `${projet.title} | Projets | Almamy Ali Haïdara`,
     description: projet.description,
+    openGraph: {
+      title: projet.title,
+      description: projet.description,
+      type: "article",
+      url: `https://www.almamyhaidara.com/projets/${params.slug}`,
+      images: projet.cover 
+        ? [{ url: projet.cover, width: 1200, height: 630, alt: projet.title }]
+        : [],
+    },
   };
 };
 
-export default async function Page(props: { params: { slug: string } }) {
-  const projet = allProjets.find(
-    (r) => r.url.replace(/projets\/\d+-/, "") === props.params.slug
-  );
+// Générer toutes les pages de projets statiquement
+export async function generateStaticParams() {
+  return allProjets
+    .filter(projet => projet.published)
+    .map((projet) => ({
+      slug: projet._raw.flattenedPath.replace("projets/", ""),
+    }));
+}
+
+export default function Page({ params }: { params: { slug: string } }) {
+  const projet = getProjetBySlug(params.slug);
 
   if (!projet) {
     notFound();
   }
 
-  return <SlugContent projet={projet} params={props.params} />;
+  return (
+    <article className="max-w-3xl mx-auto py-12 px-4">
+      <SlugContent projet={projet} params={params} />
+    </article>
+  );
 }

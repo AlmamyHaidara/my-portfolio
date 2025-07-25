@@ -5,9 +5,15 @@ import { MdxTag } from "./MdxTag";
 import { MdxYouTube } from "./MdxYouTube";
 
 export const MDX_COMPONENTS = {
-  YouTube: MdxYouTube,
+  MdxPre: MdxPre,
+  MdxCode: MdxCode,
+  MdxNote: MdxNote,
   Note: MdxNote,
+  MdxTag: MdxTag,
+  MdxYouTube: MdxYouTube,
+  // Ajout des composants de base pour la rétrocompatibilité
   pre: MdxPre,
-  Tag:MdxTag,
-  Code:MdxCode
+  Pre: MdxPre,
+  code: MdxCode,
+  Code: MdxCode, // Supporte <Code> dans les MDX
 };

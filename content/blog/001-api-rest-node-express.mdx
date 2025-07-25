@@ -13,30 +13,28 @@ published: true
 
 ### Installation des dépendances
 
-
 ```bash
 
 npm init -y
 npm install express mongoose dotenv
 
 ```
+
 ### Exemple de serveur Express
 
 ```js
-
-const express = require('express');
+const express = require("express");
 const app = express();
 
 app.use(express.json());
 
-app.get('/api/users', (req, res) => {
-  res.send({ message: 'Liste des utilisateurs' });
+app.get("/api/users", (req, res) => {
+  res.send({ message: "Liste des utilisateurs" });
 });
 
 app.listen(3000, () => {
-  console.log('Serveur démarré sur le port 3000');
+  console.log("Serveur démarré sur le port 3000");
 });
-
 ```
 
 ### Erreurs à éviter
@@ -50,11 +48,12 @@ app.listen(3000, () => {
 - **Utilisez** <Code>.env </Code> **pour vos variables d'environnement** comme l'URL de la base de données et les clés secrètes.
 
 - **Testez vos API avec Postman** pour vérifier les routes et les réponses avant d'intégrer le frontend.
----
-<div className="flex gap-4 w-full flex-wrap no-underline ">
-  <Tag href="https://nodejs.org/">Node.js</Tag> 
-  <Tag href="https://expressjs.com/">Express</Tag> 
-  <Tag href="https://git-scm.com/doc">Git</Tag> 
-  <Tag href="https://docs.github.com/">GitHub</Tag> 
-</div> 
 
+---
+
+<div className="flex gap-4 w-full flex-wrap no-underline ">
+  <MdxTag href="https://nodejs.org/">Node.js</MdxTag>
+  <MdxTag href="https://expressjs.com/">Express</MdxTag>
+  <MdxTag href="https://git-scm.com/doc">Git</MdxTag>
+  <MdxTag href="https://docs.github.com/">GitHub</MdxTag>
+</div>{" "}

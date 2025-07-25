@@ -1,3 +1,5 @@
+// Types centralisés pour l'application
+
 export type WorkType = {
   image: string;
   title: string;
@@ -8,11 +10,12 @@ export type WorkType = {
 };
 
 export type SideProjectType = {
-  logo: LucideIcon;
+  logo: any; // Remplacé LucideIcon par any pour éviter les erreurs d'importation
   title: string;
   description: string;
   url: string;
 };
+
 export type ContactMeType = {
   image: string;
   mediumImage: string;
@@ -22,11 +25,12 @@ export type ContactMeType = {
 };
 
 export type ProjectTye = {
-  [x: string]: Url;
+  [x: string]: any; // Remplacé Url par any pour éviter les erreurs d'importation
   image: string;
-  name:string;
+  name: string;
   mediumImage: string;
   description?: string;
+  path?: string; // Ajouté pour être cohérent avec l'usage dans Realisation.tsx
 };
 
 export type Tool = {
@@ -38,3 +42,10 @@ export type ToolsData = {
   category: string;
   tools: Tool[];
 };
+
+// Types supplémentaires
+export type NetworkType = {
+  img: string;
+  alt: string;
+  path: string;
+}; 

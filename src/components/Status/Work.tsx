@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { Badge } from "../ui/badge";
-import {  Projets } from "contentlayer/generated";
+// import { Projets } from "contentlayer/generated";
+import { MockProject } from "@/lib/mock-data";
 
-function Work(props: Projets) {
+function Work(props: MockProject) {
   return (
-    <Link href={`${props.url.replace(/\d+-/g, "").replace(".mdx", "")}`} className="flex items-center gap-4 p-1 rounded-lg hover:bg-primary/10 transition-colors">
+    <Link href={`${props.url}`} className="flex items-center gap-4 p-1 rounded-lg hover:bg-primary/10 transition-colors">
       <img
         src={props.cover || "/default-cover.jpg"}
         alt={props.title}

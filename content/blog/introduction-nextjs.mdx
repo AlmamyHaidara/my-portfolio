@@ -1,0 +1,68 @@
+---
+title: "Introduction à Next.js 14 : Le Framework React du Futur"
+description: "Découvrez les nouvelles fonctionnalités de Next.js 14 et pourquoi c'est le meilleur choix pour vos applications React en 2024."
+publishedAt: "2024-04-03"
+cover: "/assets/blog/nextjs-14.jpg"
+freelance: false
+published: true
+tags: ["Next.js", "React", "JavaScript", "Web Development"]
+author:
+  name: "Almamy Ali Haïdara"
+  image: "/assets/images/logo1.png"
+---
+
+# Introduction à Next.js 14
+
+Next.js 14 est la dernière version majeure du framework React développé par Vercel. Cette version apporte des améliorations significatives en termes de performances et de développement.
+
+## Les Nouveautés Majeures
+
+### 1. Turbopack (Beta)
+
+Turbopack est le nouveau bundler de Next.js, promettant des performances jusqu'à 700x plus rapides que Webpack en développement.
+
+```typescript
+// Exemple de configuration Turbopack
+export default {
+  experimental: {
+    turbo: {
+      loaders: {
+        ".md": ["raw-loader"],
+      },
+    },
+  },
+};
+```
+
+### 2. Server Actions
+
+Les Server Actions permettent d'exécuter du code côté serveur directement depuis vos composants.
+
+```typescript
+// app/actions.ts
+"use server";
+
+export async function createTodo(title: string) {
+  await db.todo.create({ data: { title } });
+}
+
+// app/page.tsx
+import { createTodo } from "./actions";
+
+export default function Page() {
+  return (
+    <form action={createTodo}>
+      <input name="title" />
+      <button type="submit">Add Todo</button>
+    </form>
+  );
+}
+```
+
+### 3. Partial Prerendering (Preview)
+
+Le Partial Prerendering permet de combiner le contenu statique et dynamique de manière optimale.
+
+## Conclusion
+
+Next.js 14 continue d'innover et de repousser les limites du développement web moderne. Avec ses nouvelles fonctionnalités, il reste le choix numéro un pour construire des applications React performantes et évolutives.

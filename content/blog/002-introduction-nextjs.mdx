@@ -46,13 +46,14 @@ export async function getServerSideProps() {
 import dynamic from "next/dynamic";
 const Component = dynamic(() => import("./Component"));
 ```
---- 
+
+---
 
 <div className="flex gap-4 w-full flex-wrap no-underline ">
   {" "}
-  <Tag href="https://nextjs.org/">Next.js</Tag> <Tag href="https://reactjs.org/">
+  <MdxTag href="https://nextjs.org/">Next.js</MdxTag> <MdxTag href="https://reactjs.org/">
     React
-  </Tag> <Tag href="https://vercel.com/">Vercel</Tag> <Tag href="https://git-scm.com/doc">
+  </MdxTag> <MdxTag href="https://vercel.com/">Vercel</MdxTag> <MdxTag href="https://git-scm.com/doc">
     Git
-  </Tag> <Tag href="https://docs.github.com/">GitHub</Tag>{" "}
+  </MdxTag> <MdxTag href="https://docs.github.com/">GitHub</MdxTag>{" "}
 </div>

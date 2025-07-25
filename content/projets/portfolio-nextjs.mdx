@@ -1,0 +1,54 @@
+---
+title: "Portfolio Personnel avec Next.js"
+description: "Un portfolio moderne et performant construit avec Next.js, TypeScript, et Tailwind CSS."
+publishedAt: "2024-04-03"
+cover: "/assets/projets/portfolio.jpg"
+freelance: false
+published: true
+technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MDX", "Contentlayer"]
+github: "https://github.com/AlmamyHaidara/my-portfolio"
+demo: "https://almamy.dev"
+featured: true
+status: "completed"
+---
+
+# Portfolio Personnel avec Next.js
+
+Ce portfolio a été construit avec les dernières technologies web pour offrir une expérience utilisateur optimale et des performances exceptionnelles.
+
+## Fonctionnalités Principales
+
+- **Design Moderne** : Interface utilisateur élégante et responsive avec Tailwind CSS
+- **Blog avec MDX** : Articles de blog écrits en MDX avec support de la syntaxe markdown
+- **Projets** : Présentation de mes projets avec filtrage et recherche
+- **Performance** : Score Lighthouse optimal grâce à Next.js et à l'optimisation des images
+- **SEO** : Optimisation pour les moteurs de recherche avec meta tags dynamiques
+
+## Technologies Utilisées
+
+```typescript
+// next.config.mjs
+import { withContentlayer } from "next-contentlayer";
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ["images.unsplash.com"],
+  },
+};
+
+export default withContentlayer(nextConfig);
+```
+
+## Architecture
+
+Le projet suit une architecture moderne basée sur les dernières pratiques de développement :
+
+- App Router de Next.js pour le routing
+- Contentlayer pour la gestion du contenu MDX
+- Tailwind CSS pour le styling
+- TypeScript pour la sécurité du typage
+
+## Déploiement
+
+Le site est déployé sur Vercel avec une configuration CI/CD automatisée.
