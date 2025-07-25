@@ -1,5 +1,11 @@
 import { Car, Code } from "lucide-react";
-import { ContactMeType, NetworkType, SideProjectType, ToolsData, WorkType } from "@/types";
+import {
+  ContactMeType,
+  NetworkType,
+  SideProjectType,
+  ToolsData,
+  WorkType,
+} from "@/types";
 
 export const WORKS: WorkType[] = [
   {
@@ -52,16 +58,14 @@ export const CONTACTME: ContactMeType[] = [
   },
   {
     image: "/assets/images/logo1.png",
-    mediumImage:
-      "/assets/images/linkedin.svg",
+    mediumImage: "/assets/images/linkedin.svg",
     name: "Linkdin",
     description: "01.01.2024",
     url: "https://www.linkedin.com/in/almamy-ha%C3%AFdara-612028210/",
   },
   {
     image: "/assets/images/logo1.png",
-    mediumImage:
-      "/assets/images/yahoo-v2.svg",
+    mediumImage: "/assets/images/yahoo-v2.svg",
     name: "Yahoo",
     description: "almamy_haidara@yahoo.com",
     url: "mailto:almamy_haidara@yahoo.com",
@@ -74,42 +78,42 @@ export const RealisationData = [
     name: "TypeScript",
     mediumImage: "/assets/images/typescript.svg",
     description: `Je suis un expert en TypeScript, un langage qui renforce la fiabilité de vos projets JavaScript grâce à la gestion statique des types.`,
-    path:"https://www.typescriptlang.org"
+    path: "https://www.typescriptlang.org",
   },
   {
     image: "/assets/images/nextjs.svg",
     name: "Next.js",
     mediumImage: "/assets/images/nextjs.svg",
     description: `Je suis un expert en Next.js, un framework basé sur React, et je peux créer des applications web performantes et optimisées pour le SEO.`,
-    path:"https://nextjs.org"
+    path: "https://nextjs.org",
   },
   {
     image: "/assets/images/Nest.js.svg",
     name: "Next.js",
     mediumImage: "/assets/images/Nest.js.svg",
     description: `Je suis un expert en Nest.js, un framework basé sur Nodejs, et je peux créer des applications web performantes, robuste et sécurisé.`,
-    path:"https://docs.nestjs.com/"
+    path: "https://docs.nestjs.com/",
   },
   {
     image: "/assets/images/tailwind.svg",
     name: "Tailwind CSS",
     mediumImage: "/assets/images/tailwind.svg",
     description: `Je suis un expert en Tailwind CSS, un framework de styles utilitaire, et je peux styliser des interfaces modernes et réactives efficacement.`,
-    path:"https://tailwindcss.com"
+    path: "https://tailwindcss.com",
   },
   {
     image: "/assets/images/postgresql-plain-wordmark.svg",
     name: "PostgreSQL",
     mediumImage: "/assets/images/postgresql-original.svg",
     description: `Je peux gérer vos infrastructures de bases de données avec PostgreSQL en utilisant des pratiques comme l'Infrastructure as Code (IaC).`,
-    path:"https://www.postgresql.org"
+    path: "https://www.postgresql.org",
   },
   {
     image: "/assets/images/brand-vercel.svg",
     name: "Vercel",
     mediumImage: "/assets/images/vercel.svg",
     description: `Je maîtrise le déploiement d'applications sur Vercel, une plateforme optimisée pour héberger des applications web modernes avec facilité et performance.`,
-    path:"https://vercel.com/"
+    path: "https://vercel.com/",
   },
 ];
 
@@ -145,7 +149,10 @@ export const toolsData: ToolsData[] = [
       { techno: "Tabnine", link: "https://www.tabnine.com/" },
       { techno: "GitHub", link: "https://github.com/" },
       { techno: "GitLab", link: "https://about.gitlab.com/" },
-      { techno: "Azure DevOps", link: "https://azure.microsoft.com/en-us/services/devops/" },
+      {
+        techno: "Azure DevOps",
+        link: "https://azure.microsoft.com/en-us/services/devops/",
+      },
       { techno: "Git", link: "https://git-scm.com/" },
     ],
   },
@@ -165,14 +172,29 @@ export const toolsData: ToolsData[] = [
       { techno: "Mocha", link: "https://mochajs.org/" },
     ],
   },
+
   {
-    category: "Deployment",
+    category: "Deployment & Infrastructure",
     tools: [
       { techno: "Vercel", link: "https://vercel.com/" },
       { techno: "Netlify", link: "https://www.netlify.com/" },
+      { techno: "Ansible", link: "https://www.ansible.com/" },
+      { techno: "Docker", link: "https://www.docker.com/" },
+      { techno: "Kubernetes", link: "https://kubernetes.io/" },
+      { techno: "Terraform", link: "https://www.terraform.io/" },
+      { techno: "Vagrant", link: "https://www.vagrantup.com/" },
       { techno: "Heroku", link: "https://www.heroku.com/" },
-      { techno: "Render", link: "https://www.heroku.com/" },
-      { techno: "Azure portal", link: "https://www.heroku.com/" },
+      { techno: "Render", link: "https://render.com/" },
+      { techno: "Azure portal", link: "https://portal.azure.com/" },
+    ],
+  },
+
+  {
+    category: "Monitoring & Analytics",
+    tools: [
+      { techno: "Prometheus", link: "https://prometheus.io/" },
+      { techno: "Grafana", link: "https://grafana.com/" },
+      { techno: "Loki", link: "https://grafana.com/oss/loki/" },
     ],
   },
 ];

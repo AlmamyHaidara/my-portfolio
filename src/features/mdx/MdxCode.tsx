@@ -6,7 +6,7 @@ export type MdxCodeProps = {
 
 export const MdxCode = (props: MdxCodeProps) => {
   return (
-    <span className="border-blue-500 bg-transparent rounded-sm text-[#ececec] text-base p-1 px-2">
+    <span className="border-blue-500 bg-blue-500/10 rounded-sm text-base p-1 px-2">
       {props.children}
     </span>
   );
