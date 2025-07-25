@@ -20,7 +20,11 @@ export function SlugContent(props: { post: Post; params: { slug: string } }) {
       >
         <div className="flex items-center gap-2">
           <p className="text-xs text-muted-foreground ">
-            {new Date(props.post.publishedAt).toLocaleDateString()}
+            {new Date(props.post.publishedAt).toLocaleDateString("fr-FR", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </p>
           <ViewCount slug={props.params.slug} />
         </div>

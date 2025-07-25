@@ -13,7 +13,8 @@ const navigation = [
     id: 1,
     path: "/",
     title: "Acceuil",
-  }, {
+  },
+  {
     id: 2,
     path: "/a-propos",
     title: "À propos",
@@ -56,18 +57,18 @@ function Header() {
       opacity: 1,
       y: 0,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: -10 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
-    <motion.header 
+    <motion.header
       className="flex items-center gap-2 px-16"
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -75,7 +76,7 @@ function Header() {
     >
       <Link
         href="/"
-        className="rounded-full flex md:w-[4%] max-md:w-full justify-between items-center"
+        className="rounded-full flex md:w-[4%] max-md:w-full justify-start items-center"
         aria-label="Accueil - CodeCraft"
       >
         <motion.div
@@ -91,7 +92,7 @@ function Header() {
             priority
           />
         </motion.div>
-        <p className="font-extrabold text-3xl sm:text-xl max-lg:hidden ">
+        <p className="font-extrabold text-3xl sm:text-xl max-lg ">
           Code<span className=" text-primary">Craft</span>
         </p>
       </Link>

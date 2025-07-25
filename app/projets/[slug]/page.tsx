@@ -2,9 +2,7 @@ import { allProjets } from "contentlayer/generated";
 // import { getProjectBySlug, getAllProjects } from "@/lib/mock-data";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-// import {ViewCount} from "../../blog/[slug]/ViewCount";
 import { SlugContent } from "./SlugContent";
-import { ViewCount } from "../../blog/[slug]/ViewCount";
 
 // Forcer la génération statique de ces pages pour un chargement plus rapide
 export const dynamic = "force-static";
@@ -16,7 +14,7 @@ const getProjetBySlug = (slug: string) => {
 };
 
 export const generateMetadata = async ({
-  params
+  params,
 }: {
   params: { slug: string };
 }): Promise<Metadata> => {
@@ -37,7 +35,7 @@ export const generateMetadata = async ({
       description: projet.description,
       type: "article",
       url: `https://www.almamyhaidara.com/projets/${params.slug}`,
-      images: projet.cover 
+      images: projet.cover
         ? [{ url: projet.cover, width: 1200, height: 630, alt: projet.title }]
         : [],
     },
@@ -47,7 +45,7 @@ export const generateMetadata = async ({
 // Générer toutes les pages de projets statiquement
 export async function generateStaticParams() {
   return allProjets
-    .filter(projet => projet.published)
+    .filter((projet) => projet.published)
     .map((projet) => ({
       slug: projet._raw.flattenedPath.replace("projets/", ""),
     }));

@@ -11,6 +11,10 @@ export const ViewCount = ({ slug }: { slug: string }) => {
   if (!viewCount.data) {
     return null;
   }
+  if (viewCount.error) {
+    console.error("Error fetching view count:", viewCount.error);
+    return <span className="text-red-500">Erreur de chargement</span>;
+  }
 
   return (
     <div className="flex items-center gap-2 text-sm">
