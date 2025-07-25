@@ -2,7 +2,7 @@
 import { ViewCount } from "../../blog/[slug]/ViewCount";
 import { Mdx } from "@/features/mdx/Mdx";
 import { Post } from "contentlayer/generated";
-import { motion } from  "framer-motion";
+import { motion } from "framer-motion";
 
 export function SlugContent(props: { post: Post; params: { slug: string } }) {
   console.log();

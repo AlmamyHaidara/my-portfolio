@@ -16,14 +16,18 @@ export function SlugContent(props: {
 }) {
   // Optimisation avec useMemo pour les données formatées
   const formattedDate = useMemo(() => {
-    return format(new Date(props.projet.publishedAt), 'dd MMMM yyyy', { locale: fr });
+    return format(new Date(props.projet.publishedAt), "dd MMMM yyyy", {
+      locale: fr,
+    });
   }, [props.projet.publishedAt]);
 
   // Optimisation: préparer l'URL de l'image une seule fois
   const imageUrl = useMemo(() => {
     if (!props.projet.cover) return "/assets/images/logo1.png";
-    if (props.projet.cover.startsWith('http')) return props.projet.cover;
-    return props.projet.cover.startsWith('/') ? props.projet.cover : `/${props.projet.cover}`;
+    if (props.projet.cover.startsWith("http")) return props.projet.cover;
+    return props.projet.cover.startsWith("/")
+      ? props.projet.cover
+      : `/${props.projet.cover}`;
   }, [props.projet.cover]);
 
   return (
@@ -36,7 +40,7 @@ export function SlugContent(props: {
         className="mb-8"
       >
         <h1 className="text-3xl font-bold mb-4">{props.projet.title}</h1>
-        
+
         <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
           <div className="flex items-center gap-2">
             <Calendar size={16} />
@@ -44,9 +48,9 @@ export function SlugContent(props: {
               {formattedDate}
             </time>
           </div>
-          
+
           <ViewCount slug={props.params.slug} />
-          
+
           {props.projet.freelance && (
             <Badge className="flex items-center gap-1 bg-primary text-primary-foreground">
               <Briefcase size={14} />
@@ -68,7 +72,7 @@ export function SlugContent(props: {
             />
           </div>
         )}
-        
+
         {/* Tags du projet */}
         {props.projet.tags && props.projet.tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-8">

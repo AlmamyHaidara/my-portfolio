@@ -9,7 +9,8 @@ tags: ["Firebase", "Angular", "Authentication", "Security"]
 ---
 
 <MdxNote type="info">
-  Firebase simplifie considérablement l'implémentation de l'authentification dans les applications Angular, offrant une solution robuste et sécurisée.
+  Firebase simplifie considérablement l'implémentation de l'authentification
+  dans les applications Angular, offrant une solution robuste et sécurisée.
 </MdxNote>
 
 ## Intégration de Firebase
@@ -19,60 +20,55 @@ tags: ["Firebase", "Angular", "Authentication", "Security"]
 ### Installation de Firebase dans Angular
 
 <MdxPre data-language="bash" data-file-name="terminal">
-```bash
-ng add @angular/fire
-```
+  {`ng add @angular/fire`}
 </MdxPre>
 
 ### Configuration de l'authentification
 
 <MdxPre data-language="typescript" data-file-name="app.module.ts">
-```typescript
-import { AngularFireModule } from '@angular/fire/compat';
+{`import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
-  imports: [
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
-  ]
+imports: [
+AngularFireModule.initializeApp(environment.firebase),
+AngularFireAuthModule
+]
 })
-export class AppModule { }
-```
+export class AppModule { }`}
+
 </MdxPre>
 
 ### Exemple d'authentification
 
 <MdxPre data-language="typescript" data-file-name="auth.service.ts">
-```typescript
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+{`import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Injectable({
-  providedIn: 'root'
+providedIn: 'root'
 })
 export class AuthService {
-  constructor(private afAuth: AngularFireAuth) {}
+constructor(private afAuth: AngularFireAuth) {}
 
-  login(email: string, password: string) {
-    return this.afAuth.signInWithEmailAndPassword(email, password)
-      .then(user => {
-        console.log('Connexion réussie', user);
-        return user;
-      })
-      .catch(err => {
-        console.error('Erreur de connexion', err);
-        throw err;
-      });
-  }
+login(email: string, password: string) {
+return this.afAuth.signInWithEmailAndPassword(email, password)
+.then(user => {
+console.log('Connexion réussie', user);
+return user;
+})
+.catch(err => {
+console.error('Erreur de connexion', err);
+throw err;
+});
 }
-```
+}`}
+
 </MdxPre>
 
 <MdxNote type="warning">
-  **Points d'attention importants :**
-  - Toujours gérer les erreurs avec `catch()`
-  - Ne jamais stocker les mots de passe en clair
-  - Utiliser des règles Firebase appropriées
+  **Points d'attention importants :** - Toujours gérer les erreurs avec
+  `catch()` - Ne jamais stocker les mots de passe en clair - Utiliser des règles
+  Firebase appropriées
 </MdxNote>
 
 ## Sécurisation des routes
@@ -80,49 +76,46 @@ export class AuthService {
 <MdxTag>Security</MdxTag>
 
 <MdxPre data-language="typescript" data-file-name="auth.guard.ts">
-```typescript
-import { Injectable } from '@angular/core';
+{`import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { AuthService } from './auth.service';
 
 @Injectable({
-  providedIn: 'root'
+providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private auth: AuthService, private router: Router) {}
+constructor(private auth: AuthService, private router: Router) {}
 
-  canActivate(): boolean {
-    if (this.auth.isAuthenticated()) {
-      return true;
-    }
-    this.router.navigate(['/login']);
-    return false;
-  }
+canActivate(): boolean {
+if (this.auth.isAuthenticated()) {
+return true;
 }
-```
+this.router.navigate(['/login']);
+return false;
+}
+}`}
+
 </MdxPre>
 
 <MdxPre data-language="typescript" data-file-name="app-routing.module.ts">
-
-import { AuthGuard } from "./auth.guard";
+{`import { AuthGuard } from "./auth.guard";
 
 const routes: Routes = [
-  {
-    path: "dashboard",
-    component: DashboardComponent,
-    canActivate: [AuthGuard],
-  },
-];
+{
+path: "dashboard",
+component: DashboardComponent,
+canActivate: [AuthGuard],
+},
+];`}
 
 </MdxPre>
 
 ## Bonnes pratiques
 
 <MdxNote type="success">
-  - Utilisez toujours HTTPS pour les communications
-  - Implémentez la validation côté serveur
-  - Mettez en place des logs de sécurité
-  - Gérez correctement les tokens d'authentification
+  - Utilisez toujours HTTPS pour les communications - Implémentez la validation
+  côté serveur - Mettez en place des logs de sécurité - Gérez correctement les
+  tokens d'authentification
 </MdxNote>
 
 ## Démonstration en vidéo
@@ -132,10 +125,11 @@ const routes: Routes = [
 ## Ressources supplémentaires
 
 <MdxNote>
-  Pour approfondir vos connaissances sur l'authentification Firebase avec Angular, consultez :
-  - [Documentation officielle Firebase](https://firebase.google.com/docs/auth)
-  - [Guide Angular Firebase](https://github.com/angular/angularfire)
-  - [Exemples de sécurité](https://firebase.google.com/docs/rules)
+  Pour approfondir vos connaissances sur l'authentification Firebase avec
+  Angular, consultez : - [Documentation officielle
+  Firebase](https://firebase.google.com/docs/auth) - [Guide Angular
+  Firebase](https://github.com/angular/angularfire) - [Exemples de
+  sécurité](https://firebase.google.com/docs/rules)
 </MdxNote>
 
 <div className="flex gap-4 w-full flex-wrap no-underline">
