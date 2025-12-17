@@ -109,7 +109,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl sm:text-2xl md:text-3xl font-medium text-primary mb-4 md:mb-6"
             >
-              Fullstack Developer & DevOps
+              Ingénieur Logiciel & DevOps
             </motion.h2>
 
             <motion.div
