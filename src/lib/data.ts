@@ -124,6 +124,11 @@ export const NetWorkData = [
     img: "/assets/images/linkedin.svg",
   },
   {
+    path: "mailto:almamy_haidara@outlook.fr",
+    alt: "almamy_haidara@outlook.fr",
+    img: "/assets/images/outlook.svg",
+  },
+  {
     path: "mailto:almamyh27@gmail.com",
     alt: "almamyh27@gmail.com",
     img: "/assets/images/gmail.svg",
