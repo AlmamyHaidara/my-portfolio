@@ -6,7 +6,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Spacing from "../src/components/Spacing";
 import { ThemeProvider } from "@/components/theme-provider";
+import { siteMetadata } from "./metadata";
 
+export const metadata = siteMetadata;
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -18,31 +20,20 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "Almamy Ali Haidara - Mon Portfolio",
-  description:
-    "Développeur Full Stack spécialisé en React, Node.js, Next.js, Angular, React Native et Firebase pour des applications web et mobiles modernes.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
         className={cn(
           `${geistSans.variable} ${geistMono.variable} antialiased h-full max-w-full m-auto px-4 `
         )}
         suppressHydrationWarning={true}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="pt-5 ">
             <Header />
           </div>

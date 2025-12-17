@@ -1,32 +1,77 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Almamy Ali Haïdara | Développeur Full Stack & DevOps",
-  description: "Portfolio d'Almamy Ali Haïdara, développeur Full Stack et DevOps spécialisé en Next.js, React, Node.js, TypeScript et Azure.",
-  keywords: ["développeur full stack", "devops", "next.js", "react", "typescript", "portfolio"],
-  authors: [{ name: "Almamy Ali Haïdara" }],
+const baseUrl = process.env.NEXT_PUBLIC_URL || "https://www.codecraft.ml";
+
+export const siteMetadata: Metadata = {
+  metadataBase: new URL(baseUrl),
+
+  title: {
+    default: "Almamy Ali Haïdara | Ingénieur Systèmes, Cloud & DevOps",
+    template: "%s | Almamy Ali Haïdara",
+  },
+
+  description:
+    "Portfolio d'Almamy Ali Haïdara, Ingénieur DevOps et Fullstack basé à Bamako, Mali. Expert en automatisation Cloud (Azure, Kubernetes, Docker), CI/CD et développement d'applications critiques (Spring Boot, Next.js).",
+
+  keywords: [
+    "Ingénieur DevOps Mali",
+    "Développeur Full Stack",
+    "Kubernetes",
+    "Docker",
+    "Azure Cloud",
+    "CI/CD Pipelines",
+    "Spring Boot",
+    "Next.js",
+    "TypeScript",
+    "Ansible",
+    "Almamy Ali Haïdara",
+    "Bamako",
+  ],
+
+  authors: [{ name: "Almamy Ali Haïdara", url: baseUrl }],
   creator: "Almamy Ali Haïdara",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://www.almamyhaidara.com/",
-    title: "Almamy Ali Haïdara | Développeur Full Stack & DevOps",
-    description: "Portfolio d'Almamy Ali Haïdara, développeur Full Stack et DevOps spécialisé en Next.js, React, Node.js, TypeScript et Azure.",
+    url: baseUrl,
+    title: "Almamy Ali Haïdara | Ingénieur Systèmes, Cloud & DevOps",
+    description:
+      "Expertise en architectures microservices, conteneurisation (K8s/Docker) et développement Fullstack. Découvrez mes projets et mon parcours.",
     siteName: "Portfolio d'Almamy Ali Haïdara",
     images: [
       {
         url: "/assets/images/logo1.png",
         width: 1200,
         height: 630,
-        alt: "Almamy Ali Haïdara - Portfolio",
+        alt: "Almamy Ali Haïdara - Ingénieur DevOps & Fullstack",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Almamy Ali Haïdara | Développeur Full Stack & DevOps",
-    description: "Portfolio d'Almamy Ali Haïdara, développeur Full Stack et DevOps spécialisé en Next.js, React, Node.js, TypeScript et Azure.",
+    title: "Almamy Ali Haïdara | Ingénieur Cloud & DevOps",
+    description:
+      "Ingénieur basé au Mali. Spécialiste Azure, Kubernetes et développement Fullstack.",
     images: ["/assets/images/logo1.png"],
     creator: "@almamyhaïdara",
   },
-}; 
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+};

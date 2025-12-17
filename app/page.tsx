@@ -53,20 +53,22 @@ const styleClass = {
 };
 
 export default function Home() {
-  // Technologies principales
   const mainTechnologies = [
-    { name: "TypeScript", color: "bg-blue-500" },
-    { name: "Spring Boot", color: "bg-green-500" },
-    { name: "Next.js", color: "bg-black" },
-    { name: "Nest.js", color: "bg-red-600" },
-    { name: "React Native", color: "bg-sky-600" },
-    { name: "Tailwind CSS", color: "bg-cyan-500" },
+    { name: "Kubernetes", color: "bg-blue-600" },
+    { name: "Docker", color: "bg-cyan-600" },
+    { name: "Azure", color: "bg-blue-500" },
     { name: "Ansible", color: "bg-red-500" },
-    { name: "Azure", color: "bg-blue-600" },
-    { name: "Angular", color: "bg-indigo-500" },
-    { name: "Jenkins", color: "bg-yellow-500" },
-  ];
+    { name: "Jenkins", color: "bg-yellow-600" },
 
+    { name: "Spring Boot", color: "bg-green-600" },
+    { name: "PostgreSQL", color: "bg-indigo-700" },
+    { name: "Nest.js", color: "bg-red-700" },
+    { name: "TypeScript", color: "bg-blue-700" },
+
+    { name: "Next.js", color: "bg-zinc-900" },
+    { name: "Angular", color: "bg-indigo-600" },
+    { name: "React Native", color: "bg-sky-600" },
+  ];
   return (
     <div className="min-h-screen py-6 sm:py-8 md:py-12 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
@@ -137,23 +139,22 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-base sm:text-lg text-muted-foreground mb-6 md:mb-8 max-w-2xl"
             >
-              Je suis un développeur{" "}
+              Ingénieur passionné par l’alliance du développement et de
+              l’infrastructure, je me spécialise dans la création d'applications{" "}
               <Link href={"#"} className={cn(`${styleClass.badge}`)}>
-                <Code size={16} />
-                fullstack
+                <Code size={16} /> fullstack
               </Link>{" "}
-              et {" "}
+              robustes et l'automatisation de systèmes via la culture{" "}
               <Link
-                href={
-                  "https://www.atlassian.com/fr/devops/what-is-devops/devops-engineer#:~:text=Un%20ing%C3%A9nieur%20DevOps%20aura%20de,des%20r%C3%A9seaux%20internes%20et%20externes."
-                }
+                href="https://www.atlassian.com/fr/devops/what-is-devops/devops-engineer"
                 target="_blank"
                 className={cn(`${styleClass.badge}`)}
               >
-                {" "}
-                <Infinity size={16} /> Référent DevOps
+                <Infinity size={16} /> DevOps
               </Link>
-              , j'accompagne les projets de la ligne de code jusqu'au déploiement orchestré. Mon expertise se concentre sur la création d'architectures microservices robustes et la mise en place de chaînes CI/CD sécurisées.
+              . Avec plus de 2 ans d'expertise en milieu professionnel, je bâtis
+              des solutions numériques performantes, sécurisées et prêtes pour
+              le Cloud.
             </motion.p>
 
             <motion.div

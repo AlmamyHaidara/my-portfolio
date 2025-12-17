@@ -1,35 +1,20 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
-// Configuration du site
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.almamyhaidara.com';
+// Utilisation d'une  unique pour tout le projet
+const baseUrl = process.env.NEXT_PUBLIC_URL || "https://www.codecraft.ml";
 
-// Liste des pages pour le sitemap
-const routes = [
-  '',
-  '/a-propos',
-  '/outil',
-  '/projets',
-  '/blog',
-];
+const routes = ["", "/a-propos", "/outil", "/projets", "/blog"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Création des entrées du sitemap pour les routes statiques
-  const staticRoutes = routes.map(route => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1 : 0.8,
-  }));
+  const staticRoutes = routes.map((route) => {
+    const path = route.startsWith("/") || route === "" ? route : `/${route}`;
 
-  // On pourrait aussi ajouter ici des routes dynamiques basées sur des contenus de blog ou de projets
-  // Exemple :
-  // const blogPosts = await getBlogPosts();
-  // const dynamicRoutes = blogPosts.map(post => ({
-  //   url: `${baseUrl}/blog/${post.slug}`,
-  //   lastModified: new Date(post.updatedAt),
-  //   changeFrequency: 'monthly' as const,
-  //   priority: 0.6,
-  // }));
+    return {
+      url: `${baseUrl}${path}`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: (route === "" ? "daily" : "weekly") as any,
+    };
+  });
 
   return [...staticRoutes];
-} 
+}
