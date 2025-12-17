@@ -37,7 +37,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.excerpt,
       type: "article",
-      url: `https://www.almamyhaidara.com/blog/${post.slug}`,
+      url: `https://www.codecraft.ml/blog/${post.slug}`,
       images: post.coverImage
         ? [{ url: post.coverImage, width: 1200, height: 630, alt: post.title }]
         : [],

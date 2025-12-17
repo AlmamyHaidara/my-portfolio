@@ -34,7 +34,7 @@ export const generateMetadata = async ({
       title: projet.title,
       description: projet.description,
       type: "article",
-      url: `https://www.almamyhaidara.com/projets/${params.slug}`,
+      url: `https://www.codecraft.ml/projets/${params.slug}`,
       images: projet.cover
         ? [{ url: projet.cover, width: 1200, height: 630, alt: projet.title }]
         : [],
@@ -59,7 +59,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <article className="max-w-3xl mx-auto py-12 px-4">
+    <article className="max-w-3xl mx-auto py-12 px-4 mdx-content prose dark:prose-invert">
       <SlugContent projet={projet} params={params} />
     </article>
   );
