@@ -242,14 +242,14 @@ export default function Home() {
               </Button>
             </Link>
 
-            <Link href="mailto:almamyh27@gmail.com" className="w-full">
+            <Link href="mailto:almamy_haidara@outlook.fr" className="w-full">
               <Button
                 variant="outline"
                 className="w-full px-4 py-4 sm:px-5 sm:py-5 text-sm sm:text-base border-border/50 hover:border-primary hover:bg-primary/5"
                 size="lg"
               >
                 <ExternalLink className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />{" "}
-                almamyh27@gmail.com
+                almamy_haidara@outlook.fr
               </Button>
             </Link>
           </motion.div>
