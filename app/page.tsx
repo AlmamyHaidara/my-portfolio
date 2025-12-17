@@ -142,7 +142,7 @@ export default function Home() {
                 <Code size={16} />
                 fullstack
               </Link>{" "}
-              et junior{" "}
+              et {" "}
               <Link
                 href={
                   "https://www.atlassian.com/fr/devops/what-is-devops/devops-engineer#:~:text=Un%20ing%C3%A9nieur%20DevOps%20aura%20de,des%20r%C3%A9seaux%20internes%20et%20externes."
@@ -151,10 +151,9 @@ export default function Home() {
                 className={cn(`${styleClass.badge}`)}
               >
                 {" "}
-                <Infinity size={16} /> DevOps
+                <Infinity size={16} /> Référent DevOps
               </Link>
-              , passionné par la création d'applications performantes et
-              sécurisées.
+              , j'accompagne les projets de la ligne de code jusqu'au déploiement orchestré. Mon expertise se concentre sur la création d'architectures microservices robustes et la mise en place de chaînes CI/CD sécurisées.
             </motion.p>
 
             <motion.div
