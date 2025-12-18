@@ -79,6 +79,28 @@
   .mdx-content strong {
     @apply text-foreground font-semibold; /* Le gras devient blanc en dark mode via foreground */
   }
+
+  /* Cible spécifiquement le contenu MDX */
+  .mdx-content a {
+    @apply text-primary underline underline-offset-4 hover:text-primary/80 transition-colors;
+  }
+
+  .mdx-content ul,
+  .mdx-content ol {
+    @apply my-6 ml-6 list-disc;
+    @apply text-muted-foreground; /* Couleur de base des points/nombres */
+  }
+
+  .mdx-content li {
+    @apply mt-2;
+    color: hsl(
+      var(--foreground)
+    ); /* Force le texte de la liste à être blanc en dark mode */
+  }
+
+  .mdx-content li strong {
+    @apply text-foreground font-bold;
+  }
 }
 
 .mdx-content > *:last-child {
