@@ -57,7 +57,7 @@ export default async function BlogPostPage({
   }
 
   return (
-    <article className="max-w-3xl mx-auto py-12 px-4">
+    <article className="max-w-3xl mx-auto py-12 px-4 mdx-content prose dark:prose-invert">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
 
       <div className="flex items-center text-sm text-gray-500 mb-8">
