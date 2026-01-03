@@ -28,7 +28,7 @@ export const generateMetadata = async ({
   }
 
   return {
-    title: `${projet.title} | Projets | Almamy Ali Haïdara`,
+    title: `${projet.title} | Projets | Almamy Aly Haïdara`,
     description: projet.description,
     openGraph: {
       title: projet.title,

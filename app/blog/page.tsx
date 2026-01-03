@@ -5,11 +5,11 @@ import { getAllBlogPosts } from "@/lib/blog";
 import { formatDate } from "@/utils";
 
 export const metadata: Metadata = {
-  title: "Blog | Almamy Ali Haïdara",
+  title: "Blog | Almamy Aly Haïdara",
   description:
     "Articles sur le développement web, Next.js, React, et plus encore.",
   openGraph: {
-    title: "Blog | Almamy Ali Haïdara",
+    title: "Blog | Almamy Aly Haïdara",
     description:
       "Articles sur le développement web, Next.js, React, et plus encore.",
     url: "https://www.codecraft.ml/blog",

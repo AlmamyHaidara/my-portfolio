@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Outils & Technologies | Almamy Ali Haïdara",
+  title: "Outils & Technologies | Almamy Aly Haïdara",
   description:
     "Découvrez les outils et technologies que j'utilise quotidiennement pour développer des applications performantes et modernes.",
   keywords: [
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "devops",
   ],
   openGraph: {
-    title: "Outils & Technologies | Almamy Ali Haïdara",
+    title: "Outils & Technologies | Almamy Aly Haïdara",
     description:
       "Découvrez les outils et technologies que j'utilise quotidiennement pour développer des applications performantes et modernes.",
     url: "https://www.codecraft.ml/outil",

@@ -87,7 +87,7 @@ export default function Home() {
           >
             <Image
               src="/assets/images/logo1.png"
-              alt="Almamy Ali Haïdara"
+              alt="Almamy Aly Haïdara"
               fill
               className="object-cover"
               priority
@@ -102,7 +102,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-4"
             >
-              Almamy Ali Haïdara
+              Almamy Aly Haïdara
             </motion.h1>
 
             <motion.h2
@@ -405,7 +405,10 @@ export default function Home() {
             <span className="font-semibold">Next.js</span>,{" "}
             <span className="font-semibold">Nestjs</span>,{" "}
             <span className="font-semibold">Tailwind CSS</span>,{" "}
-            <span className="font-semibold">PostgreSQL</span>, et{" "}
+            <span className="font-semibold">PostgreSQL</span>,{" "}
+            <span className="font-semibold">MySql</span>,{" "}
+            <span className="font-semibold">Angular</span>,{" "}
+            <span className="font-semibold">SpringBoot</span>, et{" "}
             <span className="font-semibold">Vercel</span>.
           </motion.p>
 
@@ -485,8 +488,9 @@ export default function Home() {
               </h3>
               <p className="text-sm sm:text-base text-muted-foreground">
                 Création d'applications web modernes et performantes avec
-                Next.js, React et TypeScript, en utilisant des approches comme
-                le Server-Side Rendering et les API Routes.
+                Next.js, React et TypeScript ou encore Angular, Spring-boot, en
+                utilisant des approches comme le Server-Side Rendering et les
+                API Routes ou des architectures microservices etc...
               </p>
             </motion.div>
 
@@ -514,8 +518,12 @@ export default function Home() {
                 DevOps
               </h3>
               <p className="text-sm sm:text-base text-muted-foreground">
-                Mise en place de pipelines CI/CD, containerisation avec Docker
-                et gestion d'infrastructure avec Terraform sur Azure.
+                Mise en place des pipelines CI/CD, de la conteneurisation avec
+                Docker, de l'orchestration de services avec Kubernetes, de la
+                gestion d'infrastructure avec Terraform sur Azure, de la
+                configuration des infrastructures avec Ansible, du monitoring et
+                de l'analyse des performances avec Prometheus et Grafana, ainsi
+                que du scripting avec Python ou Bash.
               </p>
             </motion.div>
 
@@ -572,12 +580,22 @@ export default function Home() {
               l'
               <span className="font-semibold">
                 {" "}
-                Infrastructure as Code (IaC)
+                La gestion d'infrastructure as Code (IaC)
               </span>
-              , avec <span className="font-semibold"> Terraform</span>, la
-              création de pipelines CI/CD avec{" "}
-              <span className="font-semibold">Azure Pipelines</span>, et la
-              gestion des conteneurs via Docker.
+              , avec <span className="font-semibold"> Terraform</span> sur Azure
+              , la création de pipelines CI/CD avec{" "}
+              <span className="font-semibold">Azure Pipelines</span> ou{" "}
+              <span className="font-semibold">Jenkins</span>, la gestion des
+              conteneurs via <span className="font-semibold">Docker</span>,
+              l'orchestration de services avec{" "}
+              <span className="font-semibold">Kubernetes</span>, la
+              configuration des infrastructures avec{" "}
+              <span className="font-semibold">Ansible</span>, le monitoring et
+              l'analyse des performances avec{" "}
+              <span className="font-semibold">Prometheus</span> et{" "}
+              <span className="font-semibold">Grafana</span>, ainsi que du
+              scripting avec <span className="font-semibold"> Python </span> ou
+              <span className="font-semibold"> Bash</span>.
             </p>
 
             <Link

@@ -6,12 +6,12 @@ export const siteMetadata: Metadata = {
   metadataBase: new URL(baseUrl),
 
   title: {
-    default: "Almamy Ali Haïdara | Ingénieur Systèmes, Cloud & DevOps",
-    template: "%s | Almamy Ali Haïdara",
+    default: "Almamy Aly Haïdara | Ingénieur Systèmes, Cloud & DevOps",
+    template: "%s | Almamy Aly Haïdara",
   },
 
   description:
-    "Portfolio d'Almamy Ali Haïdara, Ingénieur DevOps et Fullstack basé à Bamako, Mali. Expert en automatisation Cloud (Azure, Kubernetes, Docker), CI/CD et développement d'applications critiques (Spring Boot, Next.js).",
+    "Portfolio d'Almamy Aly Haïdara, Ingénieur DevOps et Fullstack basé à Bamako, Mali. Expert en automatisation Cloud (Azure, Kubernetes, Docker), CI/CD et développement d'applications critiques (Spring Boot, Next.js).",
 
   keywords: [
     "Ingénieur DevOps Mali",
@@ -24,12 +24,12 @@ export const siteMetadata: Metadata = {
     "Next.js",
     "TypeScript",
     "Ansible",
-    "Almamy Ali Haïdara",
+    "Almamy Aly Haïdara",
     "Bamako",
   ],
 
-  authors: [{ name: "Almamy Ali Haïdara", url: baseUrl }],
-  creator: "Almamy Ali Haïdara",
+  authors: [{ name: "Almamy Aly Haïdara", url: baseUrl }],
+  creator: "Almamy Aly Haïdara",
 
   robots: {
     index: true,
@@ -47,23 +47,23 @@ export const siteMetadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     url: baseUrl,
-    title: "Almamy Ali Haïdara | Ingénieur Systèmes, Cloud & DevOps",
+    title: "Almamy Aly Haïdara | Ingénieur Systèmes, Cloud & DevOps",
     description:
       "Expertise en architectures microservices, conteneurisation (K8s/Docker) et développement Fullstack. Découvrez mes projets et mon parcours.",
-    siteName: "Portfolio d'Almamy Ali Haïdara",
+    siteName: "Portfolio d'Almamy Aly Haïdara",
     images: [
       {
         url: "/assets/images/logo1.png",
         width: 1200,
         height: 630,
-        alt: "Almamy Ali Haïdara - Ingénieur DevOps & Fullstack",
+        alt: "Almamy Aly Haïdara - Ingénieur DevOps & Fullstack",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Almamy Ali Haïdara | Ingénieur Cloud & DevOps",
+    title: "Almamy Aly Haïdara | Ingénieur Cloud & DevOps",
     description:
       "Ingénieur basé au Mali. Spécialiste Azure, Kubernetes et développement Fullstack.",
     images: ["/assets/images/logo1.png"],

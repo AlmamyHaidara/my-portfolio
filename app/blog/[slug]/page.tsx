@@ -31,7 +31,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | Blog de Almamy Ali Haïdara`,
+    title: `${post.title} | Blog de Almamy Aly Haïdara`,
     description: post.excerpt,
     openGraph: {
       title: post.title,

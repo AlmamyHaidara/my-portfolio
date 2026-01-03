@@ -10,6 +10,7 @@ import {
   Building,
   Code,
   CheckCircle2,
+  Infinity,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -20,18 +21,28 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/utils";
+import Link from "next/link";
 
+const styleClass = {
+  badge:
+    "relative rounded bg-primary/10 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold inline-flex items-center gap-2 hover:bg-primary/20 transition-colors hover:underline text-primary",
+};
 // Les technologies principales
 const mainTechnologies = [
-  { name: "TypeScript", color: "bg-blue-500" },
-  { name: "Next.js", color: "bg-black" },
-  { name: "Nest.js", color: "bg-red-600" },
+  { name: "Kubernetes", color: "bg-blue-600" },
+  { name: "Docker", color: "bg-cyan-600" },
+  { name: "Azure", color: "bg-blue-500" },
+  { name: "Ansible", color: "bg-red-500" },
+  { name: "Jenkins", color: "bg-yellow-600" },
+
+  { name: "Spring Boot", color: "bg-green-600" },
+  { name: "PostgreSQL", color: "bg-indigo-700" },
+  { name: "Nest.js", color: "bg-red-700" },
+  { name: "TypeScript", color: "bg-blue-700" },
+
+  { name: "Next.js", color: "bg-zinc-900" },
+  { name: "Angular", color: "bg-indigo-600" },
   { name: "React Native", color: "bg-sky-600" },
-  { name: "Tailwind CSS", color: "bg-cyan-500" },
-  { name: "PostgreSQL", color: "bg-blue-700" },
-  { name: "Azure", color: "bg-blue-600" },
-  { name: "Docker", color: "bg-blue-600" },
-  { name: "Terraform", color: "bg-purple-700" },
 ];
 
 // Animation variants
@@ -74,7 +85,7 @@ export default function AboutPage() {
           >
             <Image
               src="/assets/images/logo1.png"
-              alt="Almamy Ali Haïdara"
+              alt="Almamy Aly Haïdara"
               fill
               className="object-cover"
               priority
@@ -111,18 +122,19 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.p
-              className="text-base sm:text-lg text-muted-foreground"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-base sm:text-lg text-muted-foreground mb-6 md:mb-8 max-w-2xl"
             >
-              Développeur Full-Stack passionné et Devops
-              {/*certifié{" "}
-              <span className="font-semibold text-primary">
-                Azure Administrator (AZ-104)
-              </span>*/}
-              , je conçois des applications modernes et sécurisées, tout en
-              garantissant une expérience utilisateur optimale.
+              Je suis Almamy Aly Haïdara, ingénieur DevOps & développeur{" "}
+              <Link href={"#"} className={cn(`${styleClass.badge}`)}>
+                <Code size={16} /> Full-Stack
+              </Link>{" "}
+              basé à Bamako, Mali. Je conçois et sécurise des architectures
+              cloud modernes, j’automatise des pipelines CI/CD, et j’aide les
+              équipes à livrer des logiciels de manière plus rapide, sûre et
+              scalable.
             </motion.p>
           </div>
         </motion.div>
@@ -138,9 +150,16 @@ export default function AboutPage() {
             variants={itemVariants}
             className="text-sm sm:text-base md:text-lg leading-relaxed"
           >
-            Mon expertise couvre non seulement le développement web avec des
-            technologies telles que{" "}
+            Mon expertise couvre non seulement le développement web et DevOps
+            avec des technologies telles que{" "}
             <span className="font-semibold text-primary">TypeScript</span>,{" "}
+            <span className="font-semibold text-primary">Angular</span>,{" "}
+            <span className="font-semibold text-primary">Kubernetes</span>,{" "}
+            <span className="font-semibold text-primary">Docker</span>,{" "}
+            <span className="font-semibold text-primary">Ansible</span>,{" "}
+            <span className="font-semibold text-primary">Jenkins</span>,{" "}
+            <span className="font-semibold text-primary">Spring Boot</span>,{" "}
+            <span className="font-semibold text-primary">Azure</span>,{" "}
             <span className="font-semibold text-primary">Next.js</span>,{" "}
             <span className="font-semibold text-primary">Nest.js</span>,{" "}
             <span className="font-semibold text-primary">Tailwind CSS</span>,{" "}
@@ -223,6 +242,10 @@ export default function AboutPage() {
                       MySQL
                     </Badge>
                     <Badge variant="outline" className="bg-card/60 text-xs">
+                      Terraform
+                    </Badge>
+
+                    <Badge variant="outline" className="bg-card/60 text-xs">
                       Azure
                     </Badge>
                   </div>
@@ -295,25 +318,38 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent className="px-3 sm:px-4 py-2 sm:py-3">
                   <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
-                    Développement d'applications diverses, notamment une
-                    application d'archivage et l'application mobile 'Sugu' pour
-                    mettre en relation fournisseurs et clients.
+                    Réalisation de plusieurs projets freelances incluant des
+                    applications web et mobiles, avec conception d’APIs backend
+                    robustes basées sur{" "}
+                    <span className="font-medium text-primary">NestJS</span>.
+                    Mise en place de l’architecture serveur, gestion de
+                    l’authentification, des bases de données relationnelles et
+                    intégration avec des applications front-end et mobiles.
+                    Déploiement et maintenance des applications en environnement
+                    cloud.
                   </p>
+
                   <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     <Badge variant="outline" className="bg-card/60 text-xs">
-                      Next.js
+                      NestJS
                     </Badge>
                     <Badge variant="outline" className="bg-card/60 text-xs">
                       TypeScript
                     </Badge>
                     <Badge variant="outline" className="bg-card/60 text-xs">
+                      PostgreSQL
+                    </Badge>
+                    <Badge variant="outline" className="bg-card/60 text-xs">
+                      Next.js
+                    </Badge>
+                    <Badge variant="outline" className="bg-card/60 text-xs">
                       React Native
                     </Badge>
                     <Badge variant="outline" className="bg-card/60 text-xs">
-                      Firebase
+                      Docker
                     </Badge>
                     <Badge variant="outline" className="bg-card/60 text-xs">
-                      Firebase
+                      Azure
                     </Badge>
                   </div>
                 </CardContent>
@@ -460,9 +496,10 @@ export default function AboutPage() {
                 Infrastructure as Code
               </h3>
               <p className="text-xs sm:text-sm text-muted-foreground">
-                Maîtrise de Terraform pour la gestion automatisée des
-                infrastructures cloud, permettant un déploiement reproductible
-                et sécurisé.
+                Conception et gestion d’infrastructures cloud avec{" "}
+                <span className="font-medium text-primary">Terraform</span>,
+                permettant des environnements reproductibles, versionnés et
+                sécurisés tout en réduisant les erreurs humaines.
               </p>
             </div>
 
@@ -472,33 +509,43 @@ export default function AboutPage() {
                 CI/CD Pipelines
               </h3>
               <p className="text-xs sm:text-sm text-muted-foreground">
-                Création et optimisation de pipelines d'intégration et de
-                déploiement continus avec Azure Pipelines pour automatiser les
-                tests et déploiements.
+                Mise en place de pipelines CI/CD pour des applications{" "}
+                <span className="font-medium text-primary">NestJS</span>, ou{" "}
+                <span className="font-medium text-primary">Spring Boot</span>,
+                ou <span className="font-medium text-primary">ASP .Net</span>,ou{" "}
+                <span className="font-medium text-primary">Angular</span>,etc...{" "}
+                incluant build, tests automatisés, création d’images Docker et
+                déploiement sur des environnements cloud afin d’assurer des
+                livraisons continues et fiables.
               </p>
             </div>
 
             <div className="bg-card/30 p-4 md:p-6 rounded-xl border border-border/50">
               <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 md:mb-3 flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-green-500" />
-                Conteneurisation
+                Conteneurisation & Orchestration
               </h3>
               <p className="text-xs sm:text-sm text-muted-foreground">
-                Utilisation de Docker pour créer des environnements isolés et
-                portables, facilitant le déploiement d'applications dans
-                différents contextes.
+                Conteneurisation d’APIs backend avec{" "}
+                <span className="font-medium text-primary">Docker</span> et
+                orchestration avec{" "}
+                <span className="font-medium text-primary">Kubernetes</span>,
+                facilitant la scalabilité, la portabilité et la gestion des
+                environnements.
               </p>
             </div>
 
             <div className="bg-card/30 p-4 md:p-6 rounded-xl border border-border/50">
               <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 md:mb-3 flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-green-500" />
-                Automatisation
+                Automatisation & Scripting
               </h3>
               <p className="text-xs sm:text-sm text-muted-foreground">
-                Scripts Python et PowerShell pour automatiser les tâches
-                répétitives et optimiser les processus de développement et de
-                déploiement.
+                Automatisation des tâches de déploiement et d’administration
+                backend à l’aide de scripts{" "}
+                <span className="font-medium text-primary">Python</span> et{" "}
+                <span className="font-medium text-primary">Bash</span>,
+                améliorant la fiabilité et la répétabilité des opérations.
               </p>
             </div>
           </motion.div>

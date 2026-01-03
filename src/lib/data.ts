@@ -95,6 +95,20 @@ export const RealisationData = [
     path: "https://docs.nestjs.com/",
   },
   {
+    image: "/assets/images/Angular.svg",
+    name: "Angular",
+    mediumImage: "/assets/images/Angular.svg",
+    description: `Je suis un expert en Angular, un framework basé sur TypeScript, et je peux créer des applications web performantes, robuste et sécurisé.`,
+    path: "https://angular.io",
+  },
+  {
+    image: "/assets/images/spring-boot.svg",
+    name: "Spring Boot",
+    mediumImage: "/assets/images/spring-boot.svg",
+    description: `Je suis un expert en Spring Boot, un framework basé sur Java, et je peux créer des applications web performantes, robuste et sécurisé.`,
+    path: "https://docs.spring.io/spring-boot/docs/current/reference/html/",
+  },
+  {
     image: "/assets/images/tailwind.svg",
     name: "Tailwind CSS",
     mediumImage: "/assets/images/tailwind.svg",
@@ -107,6 +121,13 @@ export const RealisationData = [
     mediumImage: "/assets/images/postgresql-original.svg",
     description: `Je peux gérer vos infrastructures de bases de données avec PostgreSQL en utilisant des pratiques comme l'Infrastructure as Code (IaC).`,
     path: "https://www.postgresql.org",
+  },
+  {
+    image: "/assets/images/mysql.svg",
+    name: "MySQL",
+    mediumImage: "/assets/images/mysql-original.svg",
+    description: `Je peux gérer vos infrastructures de bases de données avec MySQL en utilisant des pratiques comme l'Infrastructure as Code (IaC).`,
+    path: "https://www.mysql.com",
   },
   {
     image: "/assets/images/brand-vercel.svg",
