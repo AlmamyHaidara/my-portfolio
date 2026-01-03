@@ -1,51 +1,102 @@
 ---
-title: Automatisation des Pipelines sur Azure
-description: "Ce projet consiste en l'automatisation des tâches liées à la gestion des dumps de bases de données sur Azure. Il inclut la récupération des dumps en fin de semaine, leur stockage sécurisé sur un FileShare et leur exécution sur différents environnements en début de semaine, tout en sécurisant les informations sensibles via un Key Vault sur Azure. Le projet a été réalisé avec Azure Pipelines et Python."
+title: "Automatisation et Migration Cloud avec Terraform et Azure Pipelines"
+description: "Conception et mise en œuvre de pipelines CI/CD pour automatiser la gestion des bases de données, orchestrer les déploiements cloud avec Terraform, et migrer les infrastructures vers Azure en assurant sécurité et performance."
 publishedAt: "2025-01-31"
-cover: "/assets/images/projets/automation.png"
+cover: "/assets/images/projets/cloud-automation.png"
 freelance: false
 published: true
+tags:
+  [
+    "Azure",
+    "Terraform",
+    "Azure Pipelines",
+    "CI/CD",
+    "Automatisation",
+    "Python",
+    "Docker",
+    "Cloud",
+  ]
 ---
 
-## Présentation du projet
+## Présentation
 
-Ce projet vise à automatiser la gestion des **dumps de bases de données** sur **Azure** en orchestrant plusieurs tâches essentielles à l'aide de **Azure Pipelines** et **Python**.
+Ce projet global regroupe deux volets complémentaires essentiels à la modernisation des infrastructures IT d’entreprise :
 
-L'objectif principal est d'assurer une **gestion optimisée et sécurisée** des bases de données sur différents environnements grâce à une exécution programmée des opérations.
+- La **migration complète des infrastructures on-premises vers Microsoft Azure** à l’aide de **Terraform** pour une gestion automatisée et reproductible.
+- L’**automatisation avancée des tâches opérationnelles** liées à la gestion des bases de données, notamment la récupération, l’export, l’import et l’archivage des dumps via **Azure Pipelines** et des scripts en **Python**.
 
-## Fonctionnalités principales
-
-- **Récupération automatique des dumps** : Chaque fin de semaine, les dumps des bases de données sont extraits et stockés sur un **Azure FileShare**.
-- **Exécution des dumps sur différents environnements** : Chaque début de semaine, les dumps de la semaine précédente sont restaurés sur des **environnements distincts**.
-- **Sécurisation des informations sensibles** : Les **secrets et credentials** liés aux environnements sont stockés et récupérés dynamiquement depuis un **Azure Key Vault**.
-- **Automatisation complète via Azure Pipelines** : L'ensemble du processus est **orchestré par des pipelines** afin d'éviter toute intervention manuelle et garantir une exécution fiable.
-
-## Technologies utilisées
-
-- [Azure Pipelines](https://azure.microsoft.com/en-us/products/devops/pipelines/) : Outil de CI/CD utilisé pour l'orchestration des tâches d'automatisation.
-- [Python](https://www.python.org/) : Langage de programmation utilisé pour automatiser les scripts de récupération et d’exécution des dumps.
-- [Azure FileShare](https://azure.microsoft.com/en-us/products/storage/files/) : Service de stockage utilisé pour conserver les dumps avant leur traitement.
-- [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/) : Gestionnaire de secrets utilisé pour stocker les credentials et autres informations sensibles.
-- [Git](https://git-scm.com/doc) : Outil de gestion de version pour suivre l'évolution des scripts d'automatisation.
-- [Azure DevOps](https://azure.microsoft.com/en-us/products/devops/) : Plateforme de gestion du cycle de développement, utilisée pour le versionnement et la gestion des pipelines.
-
-## Objectif du projet
-
-L'automatisation de la gestion des bases de données sur **Azure** permet :
-
-- De **réduire les interventions manuelles** et d'éviter les erreurs humaines.
-- D’**optimiser la gestion des environnements** en assurant la disponibilité des données restaurées chaque semaine.
-- D’**améliorer la sécurité** en gérant les accès et credentials via **Azure Key Vault**.
+L’ensemble s’inscrit dans une démarche DevOps visant à optimiser la rapidité, la fiabilité et la sécurité des déploiements et opérations cloud.
 
 ---
 
-<div className="flex gap-4 w-full flex-wrap no-underline">
-    <MdxTag href="https://azure.microsoft.com/en-us/products/devops/pipelines/">Azure Pipelines</MdxTag>
-    <MdxTag href="https://www.python.org/">Python</MdxTag>
-    <MdxTag href="https://azure.microsoft.com/en-us/products/storage/files/">Azure FileShare</MdxTag>
-    <MdxTag href="https://azure.microsoft.com/en-us/products/key-vault/">Azure Key Vault</MdxTag>
-    <MdxTag href="https://git-scm.com/doc">Git</MdxTag>
-    <MdxTag href="https://docs.github.com/">GitHub</MdxTag>
-    <MdxTag href="https://azure.microsoft.com/en-us/products/devops/">Azure DevOps</MdxTag>
+## Détails du projet
 
+### Migration d’infrastructures vers Azure avec Terraform
+
+- Audit complet des infrastructures existantes et définition de l’architecture cible dans Azure.
+- Rédaction, validation et modularisation de scripts **Terraform** pour décrire toutes les ressources cloud (VM, réseaux, bases de données, services PaaS).
+- Mise en place de pipelines CI/CD pour appliquer automatiquement les modifications d’infrastructure, assurant ainsi la cohérence et la traçabilité des déploiements.
+- Formation des équipes internes aux concepts d’infrastructure as code (IaC), Terraform et pipelines de déploiement.
+- Conteneurisation d’applications avec **Docker** pour faciliter l’intégration dans les environnements cloud modernes.
+
+### Automatisation de la gestion des dumps de bases de données
+
+- Conception de workflows automatisés orchestrés par **Azure Pipelines** pour la gestion des dumps MySQL.
+- Extraction programmée des dumps chaque fin de semaine, avec stockage sécurisé sur un **Azure FileShare**.
+- Restauration automatique des dumps dans différents environnements (dev, test, staging) au début de chaque semaine.
+- Sécurisation des credentials et secrets grâce à l’intégration avec **Azure Key Vault**.
+- Scripts Python développés pour la récupération, traitement (filtrage des imports pour éviter erreurs) et exécution des dumps.
+- Archivage mensuel automatisé des dumps anciens dans des blobs Azure de type cold storage afin d’optimiser les coûts de stockage.
+- Versionnage des dumps dans des dossiers dédiés pour une traçabilité complète et une gestion simplifiée des versions.
+
+---
+
+## Objectifs et bénéfices
+
+- **Réduction des interventions manuelles** : Automatisation complète des déploiements d’infrastructures et des opérations de gestion des bases de données.
+- **Augmentation de la fiabilité et de la sécurité** : Gestion des accès et secrets via Azure Key Vault, réduction des erreurs humaines.
+- **Optimisation des coûts et des performances** : Usage intelligent des ressources cloud (archivage cold storage) et déploiements optimisés.
+- **Montée en compétences des équipes** grâce à la formation et à la documentation associée.
+- **Standardisation et traçabilité** des configurations et opérations via Terraform et pipelines CI/CD.
+
+---
+
+## Missions réalisées
+
+- Analyse, conception et migration d’infrastructures on-premises vers Azure.
+- Développement et validation de scripts Terraform modulaires et évolutifs.
+- Mise en place et optimisation de pipelines CI/CD dans Azure DevOps pour les déploiements et automatisations.
+- Création de scripts Python pour l’orchestration des dumps de bases de données.
+- Mise en œuvre d’une stratégie de sécurisation des secrets avec Azure Key Vault.
+- Formation et accompagnement des équipes techniques sur les nouvelles pratiques DevOps et IaC.
+- Containerisation avec Docker pour améliorer la portabilité des applications.
+
+---
+
+## Stack technique
+
+- [Microsoft Azure](https://azure.microsoft.com/) : Plateforme cloud cible.
+- [Terraform](https://www.terraform.io/) : Infrastructure as Code pour la gestion automatisée des ressources.
+- [Azure Pipelines](https://azure.microsoft.com/en-us/products/devops/pipelines/) : Orchestration des workflows CI/CD.
+- [Python](https://www.python.org/) : Scripts d’automatisation pour la gestion des dumps.
+- [Azure FileShare](https://azure.microsoft.com/en-us/products/storage/files/) : Stockage des dumps.
+- [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/) : Gestion sécurisée des secrets.
+- [Docker](https://www.docker.com/) : Conteneurisation d’applications.
+
+---
+
+<div className="flex gap-4 w-full flex-wrap no-underline ">
+  <MdxTag href="https://azure.microsoft.com/">Azure</MdxTag>
+  <MdxTag href="https://www.terraform.io/">Terraform</MdxTag>
+  <MdxTag href="https://azure.microsoft.com/en-us/products/devops/pipelines/">
+    Azure Pipelines
+  </MdxTag>
+  <MdxTag href="https://www.python.org/">Python</MdxTag>
+  <MdxTag href="https://azure.microsoft.com/en-us/products/storage/files/">
+    Azure FileShare
+  </MdxTag>
+  <MdxTag href="https://azure.microsoft.com/en-us/products/key-vault/">
+    Azure Key Vault
+  </MdxTag>
+  <MdxTag href="https://www.docker.com/">Docker</MdxTag>
 </div>

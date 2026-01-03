@@ -1,26 +1,91 @@
 ---
-title: "Application de Gestion de Moto-Taxi"
-description: "Développement d’une application pour gérer motos, chauffeurs, contrats, dépenses, recettes et rôles utilisateurs, avec génération automatique de rapports via Azure Functions."
+title: "Application de Gestion Complète pour Flotte de Moto-Taxis"
+description: "Développement d’une application mobile et web dédiée à la gestion opérationnelle, financière et administrative d’une flotte de moto-taxis, incluant la gestion des chauffeurs, véhicules, contrats, recettes, dépenses et communication."
 publishedAt: "2024-04-01"
 cover: "/assets/images/projets/moto-taxi.png"
 freelance: false
 published: true
-tags: ["Next.js", "Azure Functions", "MySQL", "PostgreSQL", "Gestion"]
+tags:
+  [
+    "Next.js",
+    "Azure Functions",
+    "MySQL",
+    "PostgreSQL",
+    "Gestion",
+    "Fleet Management",
+    "Transport",
+  ]
 ---
 
 ## Présentation
 
-Application pour la gestion opérationnelle et financière d’une flotte de moto-taxis.
+Cette application vise à digitaliser et automatiser la gestion complète d’une flotte de moto-taxis, en offrant des outils adaptés aussi bien pour l’entreprise que pour les chauffeurs.
+
+Le système prend en charge la gestion des chauffeurs, des motos, des contrats, des recettes journalières, des dépenses, ainsi que la communication interne entre chauffeurs et administration. Il intègre également la gestion d’autres produits connexes tels que les panneaux solaires, les batteries lithium et les motos.
+
+---
+
+## Fonctionnalités détaillées
+
+### Gestion des chauffeurs et contrats
+
+- Enregistrement et suivi des chauffeurs avec leurs informations personnelles, licences et documents administratifs.
+- Génération automatique de contrats adaptés selon différents types de contrats (CDI, CDD, sous-traitance, etc.) via des templates dynamiques de métadonnées.
+- Gestion des renouvellements, résiliations et modifications de contrats.
+- Suivi des formations et certifications obligatoires.
+
+### Gestion des motos et équipements
+
+- Inventaire complet des motos associées à la flotte, incluant état, kilométrage, entretien et réparations.
+- Suivi des équipements associés (panneaux solaires, batteries lithium) avec gestion des stocks et maintenance.
+- Attribution des motos aux chauffeurs avec historique des utilisations.
+
+### Gestion financière : recettes et dépenses
+
+- Enregistrement quotidien des recettes générées par chaque chauffeur.
+- Système automatisé de génération des rapports financiers (recettes journalières, hebdomadaires, mensuelles).
+- Gestion et suivi des dépenses liées à l’activité (carburant, entretien, assurances, etc.).
+- Production de rapports financiers automatisés pour faciliter la comptabilité.
+
+### Communication et collaboration
+
+- Interface dédiée à la communication entre les chauffeurs et l’administration, facilitant la transmission d’informations, alertes et consignes.
+- Système de notifications et messagerie intégrée.
+
+### Dashboards et analyses
+
+- Tableaux de bord personnalisés pour le suivi en temps réel des performances de la flotte.
+- Visualisation des indicateurs clés : nombre de courses, recettes, état des motos, performances des chauffeurs.
+- Outils d’analyse pour aider à la prise de décision et à l’optimisation des ressources.
+
+---
 
 ## Missions réalisées
 
-- Développement du front-end avec **Next.js**
-- Génération automatique de rapports via **Azure Functions**
-- Gestion des données avec **MySQL** et **PostgreSQL**
+- Conception et développement du front-end avec **Next.js**, offrant une interface web moderne, réactive et accessible depuis différents appareils.
+- Mise en place de fonctions serverless avec **Azure Functions** pour automatiser la génération de rapports et le traitement des données.
+- Modélisation et gestion des données avec **MySQL** et **PostgreSQL** afin de garantir robustesse, intégrité et performance.
+- Implémentation d’un système flexible de templates pour la génération automatique des contrats personnalisés.
+- Développement d’un module de communication interne pour faciliter les échanges entre chauffeurs et administration.
+- Conception de dashboards dynamiques pour le suivi opérationnel et financier.
+- Collaboration étroite avec les équipes métier pour s’assurer de la conformité réglementaire et de la pertinence fonctionnelle.
+
+---
 
 ## Stack technique
 
-- Next.js
-- Azure Functions
-- MySQL
-- PostgreSQL
+- [Next.js](https://nextjs.org/) : Framework React pour la création d’interfaces web performantes.
+- [Azure Functions](https://azure.microsoft.com/services/functions/) : Exécution serverless pour automatisation des tâches et génération de rapports.
+- [MySQL](https://www.mysql.com/) & [PostgreSQL](https://www.postgresql.org/) : Bases de données relationnelles pour la gestion structurée des données.
+- Gestion des notifications et messagerie intégrée.
+
+---
+
+<div className="flex gap-4 w-full flex-wrap no-underline ">
+  <MdxTag href="https://nextjs.org/">Next.js</MdxTag>
+  <MdxTag href="https://azure.microsoft.com/services/functions/">
+    Azure Functions
+  </MdxTag>
+  <MdxTag href="https://www.mysql.com/">MySQL</MdxTag>
+  <MdxTag href="https://www.postgresql.org/">PostgreSQL</MdxTag>
+</div>
