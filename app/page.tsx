@@ -17,6 +17,8 @@ import {
   Smartphone,
   Server,
   Infinity,
+  GitGraph,
+  Gitlab,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -25,6 +27,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CONTACTME, RealisationData, WORKS } from "@/lib/data";
+import { B } from "node_modules/@upstash/redis/zmscore-BshEAkn7.mjs";
 
 // Animation variants
 const containerVariants = {
@@ -227,6 +230,32 @@ export default function Home() {
                 <Github className="mr-2 h-4 w-4 sm:h-5 sm:w-5" /> GitHub
               </Button>
             </Link>
+            <Link
+              href="https://bitbucket.org/almamyhaidaradevops/workspace/projects/MAL"
+              target="_blank"
+              className="w-full"
+            >
+              <Button
+                variant="outline"
+                className="w-full px-4 py-4 sm:px-5 sm:py-5 text-sm sm:text-base border-border/50 hover:border-primary hover:bg-primary/5"
+                size="lg"
+              >
+                <GitGraph className="mr-2 h-4 w-4 sm:h-5 sm:w-5" /> Bitbucket
+              </Button>
+            </Link>
+            {/* <Link
+              href="https://bitbucket.org/almamyhaidaradevops/workspace/projects/MAL"
+              target="_blank"
+              className="w-full"
+            >
+              <Button
+                variant="outline"
+                className="w-full px-4 py-4 sm:px-5 sm:py-5 text-sm sm:text-base border-border/50 hover:border-primary hover:bg-primary/5"
+                size="lg"
+              >
+                <Gitlab className="mr-2 h-4 w-4 sm:h-5 sm:w-5" /> GitLab
+              </Button>
+            </Link> */}
 
             <Link
               href="https://www.linkedin.com/in/almamy-ha%C3%AFdara-612028210/"
